@@ -25,7 +25,8 @@ namespace Lessons
             //Lessons.Task12();
             //Lessons.Task13();
             //Homework.Homework4();
-            Lessons.Task14();
+            //Lessons.Task14();
+            Lessons.Task15();
 
             Console.ReadKey();
         }

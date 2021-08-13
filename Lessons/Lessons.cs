@@ -169,7 +169,7 @@ namespace Lessons
          */
         public static void Task10()
         {
-            Console.WriteLine("Hello World from Lessons!");
+            Console.WriteLine("Hello World from Lessons!!!");
         }
         /**
          * Инкремент и декремент. Постфиксный и префиксный.

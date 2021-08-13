@@ -67,7 +67,7 @@ namespace Lessons
          */
         public static void Homework3()
         {
-            double UahToEur = 0.0319;
+            double UahToEur = 0.0318;
             double UahToUsd = 0.0374;
             double UahToRub = 2.75752;
             Console.WriteLine("Введите сумму в UAH:");
