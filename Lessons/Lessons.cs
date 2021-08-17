@@ -636,10 +636,24 @@ namespace Lessons
             }
         }
         /**
+         * Цикл while
+         */
+        public static void Task16()
+        {
+            int count = 0;
+            int limit = int.Parse(Console.ReadLine());
+            while (count < limit)
+            {
+                count++;
+                Console.WriteLine(count);
+            }
+
+        }
+        /**
          * Операотры отношений
          * Операции сравнения
          */
-        public static void Task16()
+        public static void Task17()
         {
 
         }
