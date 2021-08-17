@@ -108,5 +108,115 @@ namespace Lessons
                 Console.WriteLine($"Число {firstNumber} НЕ четное (кратное) числу {secondNumber}");
             }
         }
+        /**
+         * Домашнее задание из 15-го урока
+         * 
+         * 5.   Написать калькулятор при помощи конструкции Switch.
+         */
+        public static void Homework5_Switch()
+        {
+            Console.Title = "Калькулятор";
+            double firstValue, secondValue, result = 0;
+            string action, toContinue;
+            do
+            {
+                Console.Clear();
+                Console.WriteLine("Введите первое число:");
+                while (!double.TryParse(Console.ReadLine(), out firstValue))
+                {
+                    Console.WriteLine("ОШИБКА! Число было введено не верно. Попробуйте еще раз.");
+                    Console.WriteLine("Введите первое число:");
+                }
+                Console.WriteLine("Выберите операцию которую вы хотите произвести с числами ('+','-','*','/')");
+                action = Console.ReadLine();
+                Console.WriteLine("Введите второе число:");
+                while (!double.TryParse(Console.ReadLine(), out secondValue))
+                {
+                    Console.WriteLine("ОШИБКА! Число было введено не верно. Попробуйте еще раз.");
+                    Console.WriteLine("Введите второе число:");
+                }
+                switch (action)
+                {
+                    case "+":
+                        result = firstValue + secondValue;
+                        break;
+                    case "-":
+                        result = firstValue - secondValue;
+                        break;
+                    case "*":
+                        result = firstValue * secondValue;
+                        break;
+                    case "/":
+                        if (secondValue != 0)
+                        {
+                            result = firstValue / secondValue;
+                        }
+                        break;
+
+                    default:
+                        Console.WriteLine("ОШИБКА! Калькулятор сломался!");
+                        break;
+                }
+                Console.WriteLine($"Результат = {result}");
+                Console.WriteLine("Посчитаем что-то еще раз? (Да/Нет)");
+                toContinue = Console.ReadLine();
+                toContinue = toContinue.ToLower();
+            }
+            while (toContinue == "да");
+        }
+        /**
+         * Домашнее задание из 15-го урока
+         * 
+         * 5.   Написать калькулятор при помощи конструкции If.
+         */
+        public static void Homework5_If()
+        {
+            Console.Title = "Калькулятор";
+            double firstValue, secondValue, result = 0;
+            string action, toContinue;
+            do
+            {
+                Console.Clear();
+                Console.WriteLine("Введите первое число:");
+                while (!double.TryParse(Console.ReadLine(), out firstValue))
+                {
+                    Console.WriteLine("ОШИБКА! Число было введено не верно. Попробуйте еще раз.");
+                    Console.WriteLine("Введите первое число:");
+                }
+                Console.WriteLine("Выберите операцию которую вы хотите произвести с числами ('+','-','*','/')");
+                action = Console.ReadLine();
+                Console.WriteLine("Введите второе число:");
+                while (!double.TryParse(Console.ReadLine(), out secondValue))
+                {
+                    Console.WriteLine("ОШИБКА! Число было введено не верно. Попробуйте еще раз.");
+                    Console.WriteLine("Введите второе число:");
+                }
+                if (action == "+")
+                {
+                    result = firstValue + secondValue;
+                }
+                else if (action == "-")
+                {
+                    result = firstValue - secondValue;
+                }
+                else if (action == "*")
+                {
+                    result = firstValue * secondValue;
+                }
+                else if (action == "/" && secondValue != 0)
+                {
+                    result = firstValue / secondValue;
+                }
+                else
+                {
+                    Console.WriteLine("ОШИБКА! Калькулятор сломался!");
+                }
+                Console.WriteLine($"Результат = {result}");
+                Console.WriteLine("Посчитаем что-то еще раз? (Да/Нет)");
+                toContinue = Console.ReadLine();
+                toContinue = toContinue.ToLower();
+            }
+            while (toContinue == "да");
+        }
     }
 }
