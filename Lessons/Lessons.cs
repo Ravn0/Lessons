@@ -662,10 +662,21 @@ namespace Lessons
             } while (count < 5);
         }
         /**
+         * Цикл for
+         */
+        public static void Task18()
+        {
+            int length = int.Parse(Console.ReadLine());
+            for (int i = 0; i < length; i++)
+            {
+                Console.WriteLine(i);
+            }
+        }
+        /**
          * Операотры отношений
          * Операции сравнения
          */
-        public static void Task18()
+        public static void Task19()
         {
 
         }
