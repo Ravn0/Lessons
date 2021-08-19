@@ -221,11 +221,12 @@ namespace Lessons
         /**
          * Домашнее задание из 16-го урока
          * 
-         * 5.   Написать программу для подсчета суммы и количества четных и нечетных чисел в диапазоне заданых пользывателем
+         * 5.   Написать программу для подсчета суммы и количества чётных и нечётных чисел в диапазоне заданых пользывателем
          */
         public static void Homework6()
         {
-            int rangeFrom, rangeUpTo, qtyEven = 0, qtyUneven = 0, sumEven = 0, sumUneven = 0;
+            int rangeFrom, rangeUpTo, sumEven = 0, sumUneven = 0;
+            uint qtyEven = 0, qtyUneven = 0;
             Console.WriteLine("Введите диапазон чисел\nОт:");
             while (!int.TryParse(Console.ReadLine(), out rangeFrom))
             {
@@ -238,7 +239,7 @@ namespace Lessons
                 Console.WriteLine("ОШИБКА! Число было введено не верно. Попробуйте еще раз.");
                 Console.WriteLine("До:");
             }
-            while (rangeFrom < rangeUpTo + 1)
+            while (rangeFrom <= rangeUpTo)
             {
                 if (rangeFrom % 2 == 0)
                 {
@@ -252,7 +253,7 @@ namespace Lessons
                 }
                 rangeFrom++;
             }
-            Console.WriteLine($"Итог:\nКоличество четных = {qtyEven}\nКоличество нечетных = {qtyUneven}\nСумма четных чисел = {sumEven}\nСумма нечетных чисел = {sumUneven}");
+            Console.WriteLine($"Итог:\nКоличество чётных чисел = {qtyEven}\nКоличество нечётных чисел= {qtyUneven}\nСумма чётных чисел = {sumEven}\nСумма нечётных чисел = {sumUneven}");
         }
     }
 }

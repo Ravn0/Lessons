@@ -31,8 +31,8 @@ namespace Lessons
             //Homework.Homework5_Switch();
             //Homework.Homework5_If();
             //Lessons.Task16();
-            //Homework.Homework6();
-            Lessons.Task17();
+            Homework.Homework6();
+            //Lessons.Task17();
 
             Console.ReadKey();
         }
