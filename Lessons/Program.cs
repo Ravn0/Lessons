@@ -30,7 +30,8 @@ namespace Lessons
             //Lessons.Task15_1();
             //Homework.Homework5_Switch();
             //Homework.Homework5_If();
-            Lessons.Task16();
+            //Lessons.Task16();
+            Homework.Homework6();
 
             Console.ReadKey();
         }

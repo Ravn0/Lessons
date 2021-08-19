@@ -218,5 +218,41 @@ namespace Lessons
             }
             while (toContinue == "да");
         }
+        /**
+         * Домашнее задание из 16-го урока
+         * 
+         * 5.   Написать программу для подсчета суммы и количества четных и нечетных чисел в диапазоне заданых пользывателем
+         */
+        public static void Homework6()
+        {
+            int rangeFrom, rangeUpTo, qtyEven = 0, qtyUneven = 0, sumEven = 0, sumUneven = 0;
+            Console.WriteLine("Введите диапазон чисел\nОт:");
+            while (!int.TryParse(Console.ReadLine(), out rangeFrom))
+            {
+                Console.WriteLine("ОШИБКА! Число было введено не верно. Попробуйте еще раз.");
+                Console.WriteLine("От:");
+            }
+            Console.WriteLine("До:");
+            while (!int.TryParse(Console.ReadLine(), out rangeUpTo))
+            {
+                Console.WriteLine("ОШИБКА! Число было введено не верно. Попробуйте еще раз.");
+                Console.WriteLine("До:");
+            }
+            while (rangeFrom < rangeUpTo + 1)
+            {
+                if (rangeFrom % 2 == 0)
+                {
+                    qtyEven++;
+                    sumEven += rangeFrom;
+                }
+                else
+                {
+                    qtyUneven++;
+                    sumUneven += rangeFrom;
+                }
+                rangeFrom++;
+            }
+            Console.WriteLine($"Итог:\nКоличество четных = {qtyEven}\nКоличество нечетных = {qtyUneven}\nСумма четных чисел = {sumEven}\nСумма нечетных чисел = {sumUneven}");
+        }
     }
 }
