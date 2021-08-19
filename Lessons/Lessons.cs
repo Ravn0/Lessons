@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Lessons
@@ -673,10 +674,58 @@ namespace Lessons
             }
         }
         /**
+         * Цикл for Особенности
+         * несколько переменных
+         * Цикл for в обратном порядке
+         * несколько условий
+         */
+        public static void Task19()
+        {
+            int length = int.Parse(Console.ReadLine());
+            for (int i = 0; i < length; i++)
+            {
+                Console.WriteLine(i);
+            }
+
+            for (; ; )
+            {
+                Console.WriteLine("for is working");
+                Thread.Sleep(300);
+                break;
+            }
+
+            int k = 0;
+            for (; k < 3; k++)
+            {
+                Console.WriteLine("for_1: " + k);
+            }
+            for (; k < 5; k++)
+            {
+                Console.WriteLine("for_2: " + k);
+            }
+
+            for (int i = 0, j = 5; i < 10 && j < 12; i++, j++)
+            {
+                Console.WriteLine("i: " + i);
+                Console.WriteLine("j: " + j);
+            }
+
+            for (int i = int.Parse(Console.ReadLine()); i >= 0; i--)
+            {
+                Console.WriteLine(i);
+            }
+
+            for (int i = 0, j = 5; i < 5; i++, j--)
+            {
+                Console.WriteLine("i: " + i);
+                Console.WriteLine("j: " + j);
+            }
+        }
+        /**
          * Операотры отношений
          * Операции сравнения
          */
-        public static void Task19()
+        public static void Task20()
         {
 
         }
