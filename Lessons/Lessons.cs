@@ -650,10 +650,22 @@ namespace Lessons
 
         }
         /**
+         * Цикл do while
+         */
+        public static void Task17()
+        {
+            int count = 0;
+            do
+            {
+                count++;
+                Console.WriteLine(count);
+            } while (count < 5);
+        }
+        /**
          * Операотры отношений
          * Операции сравнения
          */
-        public static void Task17()
+        public static void Task18()
         {
 
         }
