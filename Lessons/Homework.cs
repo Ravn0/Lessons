@@ -256,13 +256,196 @@ namespace Lessons
             Console.WriteLine($"Итог:\nКоличество чётных чисел = {qtyEven}\nКоличество нечётных чисел= {qtyUneven}\nСумма чётных чисел = {sumEven}\nСумма нечётных чисел = {sumUneven}");
         }
         /**
-         * Домашнее задание из -го урока
+         * Домашнее задание из 22-го урока
          * 
-         * 5.   
+         * 5.   Треугольники в консоли C#
          */
         public static void Homework5()
         {
+            int heightTriangle;
+            Console.WriteLine("Введите высоту треугольника:");
+            while (!int.TryParse(Console.ReadLine(), out heightTriangle))
+            {
+                Console.WriteLine("ОШИБКА! Число было введено не верно. Попробуйте еще раз.");
+                Console.WriteLine("Введите высоту треугольника:");
+            }
+            /*
+          
+             #
+             ##
+             ###
+             ####
+             #####  
 
+            */
+            for (int i = 1; i <= heightTriangle; i++)
+            {
+                Console.WriteLine(new string('#', i));
+            }
+            for (int i = 0; i < 2; i++)
+            {
+                Console.WriteLine();
+            }
+            /*
+          
+             #####
+             ####
+             ###
+             ##
+             #  
+
+            */
+            for (int i = heightTriangle; i >= 1; i--)
+            {
+                Console.WriteLine(new string('#', i));
+            }
+            for (int i = 0; i < 2; i++)
+            {
+                Console.WriteLine();
+            }
+            /*
+          
+                 #
+                ##
+               ###
+              ####
+             #####  
+
+            */
+            for (int i = 1, j = heightTriangle; i <= heightTriangle; i++, j--)
+            {
+                Console.WriteLine(new string(' ', j) + new string('#', i));
+            }
+            for (int i = 0; i < 2; i++)
+            {
+                Console.WriteLine();
+            }
+            /*
+          
+             #####
+              ####
+               ###
+                ##
+                 #  
+
+            */
+            for (int i = heightTriangle, j = 0; i >= 1; i--, j++)
+            {
+                Console.WriteLine(new string(' ', j) + new string('#', i));
+            }
+        }
+        /**
+         * Домашнее задание из 22-го урока
+         * 
+         * 5.   Треугольники в консоли C#
+         */
+
+        public static void Homework5_V_2()
+        {
+            int heightTriangle;
+            Console.WriteLine("Введите высоту треугольника:");
+            while (!int.TryParse(Console.ReadLine(), out heightTriangle))
+            {
+                Console.WriteLine("ОШИБКА! Число было введено не верно. Попробуйте еще раз.");
+                Console.WriteLine("Введите высоту треугольника:");
+            }
+            /*
+          
+             #
+             ##
+             ###
+             ####
+             #####  
+
+            */
+            for (int i = 0; i < heightTriangle; i++)
+            {
+                for (int j = 0; j <= i; j++)
+                {
+                    Console.Write("#");
+                }
+                Console.WriteLine();
+            }
+            for (int i = 0; i < 2; i++)
+            {
+                Console.WriteLine();
+            }
+            /*
+          
+             #####
+             ####
+             ###
+             ##
+             #  
+
+            */
+            for (int i = 0; i < heightTriangle; i++)
+            {
+                for (int j = heightTriangle; j > i; j--)
+                {
+                    Console.Write("#");
+                }
+                Console.WriteLine();
+            }
+            for (int i = 0; i < 2; i++)
+            {
+                Console.WriteLine();
+            }
+            /*
+          
+                 #
+                ##
+               ###
+              ####
+             #####  
+
+            */
+            //for (int i = 0; i < heightTriangle; i++)
+            //{
+            //    Console.SetCursorPosition(heightTriangle - i - 1, heightTriangle * 3 + i + 1);
+            //    for (int j = 0; j <= i; j++)
+            //    {
+            //        Console.Write("#");
+            //    }
+            //}
+            //Console.WriteLine();
+            for (int i = 0; i < heightTriangle; i++)
+            {
+                for (int j = heightTriangle - 1; j > i; j--)
+                {
+                    Console.Write(" ");
+                }
+                for (int j = 0; j <= i; j++)
+                {
+                    Console.Write("#");
+                }
+                Console.WriteLine();
+            }
+            for (int i = 0; i < 2; i++)
+            {
+                Console.WriteLine();
+            }
+            /*
+          
+             #####
+              ####
+               ###
+                ##
+                 #  
+
+            */
+            for (int i = 0; i < heightTriangle; i++)
+            {
+                for (int j = 0; j < i; j++)
+                {
+                    Console.Write(" ");
+                }
+                for (int j = heightTriangle; j > i; j--)
+                {
+                    Console.Write("#");
+                }
+                Console.WriteLine();
+            }
         }
     }
 }
