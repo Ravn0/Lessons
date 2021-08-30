@@ -16,25 +16,29 @@ namespace Lessons
             //Lessons.Task6_1();
             //Lessons.Task7();
             //Lessons.Task8();
-            //Homework.Homework1();
-            //Homework.Homework2();
-            //Homework.Homework3();
+            //Homework.Homework1_1();
+            //Homework.Homework1_2();
+            //Homework.Homework1_3();
             //Lessons.Task9();
             //Lessons.Task10();
             //Lessons.Task11();
             //Lessons.Task12();
             //Lessons.Task13();
-            //Homework.Homework4();
+            //Homework.Homework2();
             //Lessons.Task14();
             //Lessons.Task15();
             //Lessons.Task15_1();
-            //Homework.Homework5_Switch();
-            //Homework.Homework5_If();
+            //Homework.Homework3_Switch();
+            //Homework.Homework3_If();
             //Lessons.Task16();
-            //Homework.Homework6();
+            //Homework.Homework4();
             //Lessons.Task17();
             //Lessons.Task18();
-            Lessons.Task19();
+            //Lessons.Task19();
+            //Lessons.Task20();
+            //Lessons.Task21();
+            //Lessons.Task22();
+            Lessons.Task22_1();
 
             Console.ReadKey();
         }

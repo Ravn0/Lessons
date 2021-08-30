@@ -722,10 +722,104 @@ namespace Lessons
             }
         }
         /**
+         * Ключевое слово break
+         */
+        public static void Task20()
+        {
+            for (int i = 0; i < 100; i++)
+            {
+                string msg = Console.ReadLine();
+                if (msg == "exit")
+                {
+                    break;
+                }
+                Console.WriteLine(i);
+            }
+
+        }
+        /**
+         * Ключевое слово continue
+         */
+        public static void Task21()
+        {
+            for (int i = 0; i < 5; i++)
+            {
+                if (i == 2)
+                {
+                    continue;
+                }
+                Console.WriteLine(i);
+            }
+        }
+        /**
+         * Вложениые цыклы
+         */
+        public static void Task22()
+        {
+            for (int i = 1; i <= 3; i++)
+            {
+                Console.WriteLine("Цикл 1 итерация №: " + i);
+                for (int j = 1; j <= 4; j++)
+                {
+                    Console.WriteLine("\tЦикл 2 итерация №: " + j);
+                    for (int k = 1; k <= 2; k++)
+                    {
+                        Console.WriteLine("\t\tЦикл 3 итерация №: " + k);
+                    }
+                }
+            }
+
+            Console.Write("Введите высоту прямоугольника: ");
+            int height = int.Parse(Console.ReadLine());
+            Console.Write("Введите ширину прямоугольника: ");
+            int width = int.Parse(Console.ReadLine());
+            for (int i = 0; i < height; i++)
+            {
+                for (int j = 0; j < width; j++)
+                {
+                    Console.Write("#");
+                }
+                Console.WriteLine();
+            }
+        }
+        /**
+         * Вспомогательный метод для Task22_1
+         */
+        public static int[,] GetRandomArray(int rows, int columns)
+        {
+            Random random = new Random();
+            var result = new int[rows, columns];
+            for (int i = 0; i < rows; i++)
+            {
+                for (int j = 0; j < columns; j++)
+                {
+                    result[i, j] = random.Next(100);
+                }
+            }
+            return result;
+        }
+        /**
+         * Вложениые цыклы. Пример с 2-х мерным массивом
+         */
+        public static void Task22_1()
+        {
+            int rows = 5;
+            int columns = 10;
+            var myArray = GetRandomArray(rows, columns);
+            for (int i = 0; i < rows; i++)
+            {
+                for (int j = 0; j < columns; j++)
+                {
+                    Console.Write($"{myArray[i, j]}\t");
+                }
+                Console.WriteLine();
+            }
+        }
+        /**
          * Операотры отношений
          * Операции сравнения
          */
-        public static void Task20()
+        public static void Task23()
         {
 
         }

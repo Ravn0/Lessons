@@ -11,9 +11,9 @@ namespace Lessons
         /**
          * Домашнее задание из 8-го урока
          * 
-         * 1.   Напишите программу, вычисляющую среднее арифметическое двух чисел
+         * 1.1.   Напишите программу, вычисляющую среднее арифметическое двух чисел
          */
-        public static void Homework1()
+        public static void Homework1_1()
         {
             double firstNumber, secondNumber;
             Console.WriteLine("Введите первое число:");
@@ -34,9 +34,9 @@ namespace Lessons
         /**
          * Домашнее задание из 8-го урока
          * 
-         * 2.   Введите три числа и выведите на экран значение суммы и произведение этих чисел.
+         * 1.2.   Введите три числа и выведите на экран значение суммы и произведение этих чисел.
          */
-        public static void Homework2()
+        public static void Homework1_2()
         {
             Console.WriteLine("Введите первое число:");
             double firstNumber, secondNumber, thirdNumber;
@@ -62,10 +62,10 @@ namespace Lessons
         /**
          * Домашнее задание из 8-го урока
          * 
-         * 3.   Напишите простой конвертер валют (без возможности динамического выбора валют пользователем).
+         * 1.3.   Напишите простой конвертер валют (без возможности динамического выбора валют пользователем).
          *      Валюты заданы харкором и не изменяются. Тип валют на выбор программиста.
          */
-        public static void Homework3()
+        public static void Homework1_3()
         {
             double UahToEur = 0.0318;
             double UahToUsd = 0.0374;
@@ -82,9 +82,9 @@ namespace Lessons
         /**
          * Домашнее задание из 13-го урока
          * 
-         * 4.   Напишите программу, проверяющую число, введенное с клавиатуры, на четность.
+         * 2.   Напишите программу, проверяющую число, введенное с клавиатуры, на четность.
          */
-        public static void Homework4()
+        public static void Homework2()
         {
             double firstNumber, secondNumber;
             Console.WriteLine("Введите первое число:");
@@ -111,9 +111,9 @@ namespace Lessons
         /**
          * Домашнее задание из 15-го урока
          * 
-         * 5.   Написать калькулятор при помощи конструкции Switch.
+         * 3.   Написать калькулятор при помощи конструкции Switch.
          */
-        public static void Homework5_Switch()
+        public static void Homework3_Switch()
         {
             Console.Title = "Калькулятор";
             double firstValue, secondValue, result = 0;
@@ -167,9 +167,9 @@ namespace Lessons
         /**
          * Домашнее задание из 15-го урока
          * 
-         * 5.   Написать калькулятор при помощи конструкции If.
+         * 3.   Написать калькулятор при помощи конструкции If.
          */
-        public static void Homework5_If()
+        public static void Homework3_If()
         {
             Console.Title = "Калькулятор";
             double firstValue, secondValue, result = 0;
@@ -221,9 +221,9 @@ namespace Lessons
         /**
          * Домашнее задание из 16-го урока
          * 
-         * 5.   Написать программу для подсчета суммы и количества чётных и нечётных чисел в диапазоне заданых пользывателем
+         * 4.   Написать программу для подсчета суммы и количества чётных и нечётных чисел в диапазоне заданых пользывателем
          */
-        public static void Homework6()
+        public static void Homework4()
         {
             int rangeFrom, rangeUpTo, sumEven = 0, sumUneven = 0;
             uint qtyEven = 0, qtyUneven = 0;
@@ -254,6 +254,15 @@ namespace Lessons
                 rangeFrom++;
             }
             Console.WriteLine($"Итог:\nКоличество чётных чисел = {qtyEven}\nКоличество нечётных чисел= {qtyUneven}\nСумма чётных чисел = {sumEven}\nСумма нечётных чисел = {sumUneven}");
+        }
+        /**
+         * Домашнее задание из -го урока
+         * 
+         * 5.   
+         */
+        public static void Homework5()
+        {
+
         }
     }
 }
