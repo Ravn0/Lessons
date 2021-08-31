@@ -816,10 +816,87 @@ namespace Lessons
             }
         }
         /**
+         * Тернарный оператор
+         * 
+         * [первый операнд - условие] ? [второй операнд if_true] : [третий операнд if_false]
+         */
+        public static void Task23()
+        {
+            int a = 0;
+            int b = 1;
+            int c = 0;
+            //унарный оператор
+            a++;
+            //бинарный оператор
+            c = a + b;
+
+            bool accessAllowed;
+            string storedPassword = "qwerty";
+            string enteredPassword = Console.ReadLine();
+            //if (storedPassword == enteredPassword)
+            //{
+            //    accessAllowed = true;
+            //}
+            //else
+            //{
+            //    accessAllowed = false;
+            //}
+            accessAllowed = storedPassword == enteredPassword ? true : false; //Тернарный оператор
+            Console.WriteLine(accessAllowed);
+
+            int inputData = int.Parse(Console.ReadLine());
+            int outputData = inputData < 0 ? 1 : inputData; //Тернарный оператор
+            Console.WriteLine(outputData);
+        }
+        /**
+         * Одномерные массивы
+         * 
+         * Тип_элементов_массива [] имя_масива;
+         */
+        public static void Task24()
+        {
+            int[] myArray;
+            myArray = new int[5];
+            myArray[1] = 3;
+            myArray[0] = 10;
+            int a = myArray[0];
+            int b = myArray.Length;
+            Console.WriteLine(a);
+            Console.WriteLine(b);
+        }
+        /**
+         * Массивы
+         * 
+         * Одномерные массивы
+         * 
+         * Способы инициализации масива
+         */
+        public static void Task25()
+        {
+            int[] myArray1 = new int[5];
+            int[] myArray2 = new int[5] { 5, 6, 9, 7, 8 };
+            int[] myArray3 = new int[] { 5, 6, 9, 7 };
+            int[] myArray4 = new[] { 5, 6, 9, 7 };
+            int[] myArray5 = { 5, 6, 9, 7 };
+            int[] myArray6 = Enumerable.Repeat(5, 10).ToArray();
+            int[] myArray7 = Enumerable.Range(4, 5).ToArray();
+        }
+        /**
+         * Массивы и цыклы
+         */
+        public static void Task26()
+        {
+            int[] myArray = { 10, 3, 2, 55 };
+            for (int i = 0; i < myArray.Length; i++)
+            {
+                Console.WriteLine(myArray[i]);
+            }
+        }
+        /**
          * Операотры отношений
          * Операции сравнения
          */
-        public static void Task23()
+        public static void Task27()
         {
 
         }

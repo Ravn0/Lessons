@@ -40,7 +40,11 @@ namespace Lessons
             //Lessons.Task22();
             //Lessons.Task22_1();
             //Homework.Homework5();
-            Homework.Homework5_V_2();
+            //Homework.Homework5_V_2();
+            //Lessons.Task23();
+            //Lessons.Task24();
+            //Lessons.Task25();
+            Lessons.Task26();
 
             Console.ReadKey();
         }
