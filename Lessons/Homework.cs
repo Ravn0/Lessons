@@ -447,5 +447,72 @@ namespace Lessons
                 Console.WriteLine();
             }
         }
+        /**
+         * Домашнее задание из 26-го урока
+         * 
+         * 6.   Заполнить массив с клавиатуры
+         * 7.   Вывести массив в обратном порядке
+         * 8.   Найти сумму четный числе в массиве.
+         * 9.   Найти найменьшее число в масиве.
+         */
+
+        public static void Homework6789()
+        {
+            int[] myArray;
+            //6.   Заполнить массив с клавиатуры
+            uint elementsCount;
+            Console.Write("Введите размер массива:");
+            while (!uint.TryParse(Console.ReadLine(), out elementsCount))
+            {
+                Console.WriteLine("ОШИБКА! Число было введено не верно. Попробуйте еще раз.");
+                Console.Write("Введите размер массива:");
+            }
+            myArray = new int[elementsCount];
+            for (int i = 0; i < myArray.Length; i++)
+            {
+                Console.Write($"Введите элемент массива № {i + 1}:");
+                while (!int.TryParse(Console.ReadLine(), out myArray[i]))
+                {
+                    Console.WriteLine("ОШИБКА! Число было введено не верно. Попробуйте еще раз.");
+                    Console.Write($"Введите элемент массива № { i + 1}:");
+                }
+            }
+            //7.   Вывести массив в обратном порядке
+            for (int i = myArray.Length - 1; i >= 0; i--)
+            {
+                Console.Write(myArray[i] + " ");
+            }
+            Console.WriteLine();
+            //8.   Найти сумму четный числе в массиве.
+            int sumEven = 0;
+            for (int i = 0; i < myArray.Length; i++)
+            {
+                if (myArray[i] % 2 == 0)
+                {
+                    sumEven += myArray[i];
+                }
+            }
+            Console.WriteLine($"Сумма четных числе в масиве = {sumEven}");
+            //9.   Найти найменьшее число в масиве. 
+            Console.WriteLine($"Найменшее число в масиве {myArray.Min()}");
+            //9.   Найти найменьшее число в масиве. Версия 2
+            int minValue = myArray[0];
+            for (int i = 1; i < myArray.Length; i++)
+            {
+                minValue = minValue < myArray[i] ? minValue : myArray[i];
+            }
+            Console.WriteLine($"Найменшее число в масиве {minValue}");
+
+        }
+        /**
+         * Домашнее задание из -го урока
+         * 
+         * 10.   Заполнить массив с клавиатуры
+         */
+
+        public static void Homework10()
+        {
+
+        }
     }
 }

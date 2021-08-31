@@ -44,7 +44,8 @@ namespace Lessons
             //Lessons.Task23();
             //Lessons.Task24();
             //Lessons.Task25();
-            Lessons.Task26();
+            //Lessons.Task26();
+            Homework.Homework6789();
 
             Console.ReadKey();
         }
