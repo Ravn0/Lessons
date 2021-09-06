@@ -893,10 +893,32 @@ namespace Lessons
             }
         }
         /**
+         * как работать с массивами в C# на самом деле
+         */
+        public static void Task27()
+        {
+            int[] myArray = { 111, 10, 4, 10, 111, 64, 77, 4, 42, 5 };
+            Console.WriteLine(myArray.Min());   // using System.Linq;
+            Console.WriteLine(myArray.Sum());
+            Console.WriteLine(myArray.Where(i => i % 2 == 0).Sum());
+            Console.WriteLine(myArray.Where(i => i % 2 != 0).Min());
+            int[] result = myArray.Distinct().ToArray();
+            int[] result2 = myArray.OrderBy(i => i).ToArray();
+            int[] result3 = myArray.OrderByDescending(i => i).ToArray();
+            Array.Sort(myArray);
+            int result4 = Array.Find(myArray, i => i < 70);
+            int result5 = Array.FindLast(myArray, i => i < 70);
+            int[] result6 = Array.FindAll(myArray, i => i < 70);
+            int result7 = Array.FindIndex(myArray, i => i == 111);   //если нужного елемента в масиве нет то вернется -1
+            int result8 = Array.FindLastIndex(myArray, i => i == 111);
+            Array.Reverse(myArray); //записывает массив задом на перед
+            int result9 = myArray.Where(i => i < 70).FirstOrDefault();  //Тоже самое что Array.Find(myArray, i => i < 70), дефол = 0 (дефолт нужен если мы не найдем таких значений)
+        }
+        /**
          * Операотры отношений
          * Операции сравнения
          */
-        public static void Task27()
+        public static void Task28()
         {
 
         }
