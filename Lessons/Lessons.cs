@@ -893,7 +893,7 @@ namespace Lessons
             }
         }
         /**
-         * как работать с массивами в C# на самом деле
+         * Как работать с массивами в C# на самом деле
          */
         public static void Task27()
         {
@@ -915,10 +915,17 @@ namespace Lessons
             int result9 = myArray.Where(i => i < 70).FirstOrDefault();  //Тоже самое что Array.Find(myArray, i => i < 70), дефол = 0 (дефолт нужен если мы не найдем таких значений)
         }
         /**
+         * Индексы и диапазоны (для .Net Core)
+         */
+        public static void Task28()
+        {
+            //Goto proj LessonsCore
+        }
+        /**
          * Операотры отношений
          * Операции сравнения
          */
-        public static void Task28()
+        public static void Task29()
         {
 
         }

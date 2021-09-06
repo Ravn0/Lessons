@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ultimate Predictor", "Ultim
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoApp", "TodoApp\TodoApp.csproj", "{4516ED28-18B8-4905-9563-1B777A9A022B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LessonsCore", "LessonsCore\LessonsCore.csproj", "{2284B8F9-EEF1-423E-87D5-D44DF2D35B65}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{4516ED28-18B8-4905-9563-1B777A9A022B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4516ED28-18B8-4905-9563-1B777A9A022B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4516ED28-18B8-4905-9563-1B777A9A022B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2284B8F9-EEF1-423E-87D5-D44DF2D35B65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2284B8F9-EEF1-423E-87D5-D44DF2D35B65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2284B8F9-EEF1-423E-87D5-D44DF2D35B65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2284B8F9-EEF1-423E-87D5-D44DF2D35B65}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
