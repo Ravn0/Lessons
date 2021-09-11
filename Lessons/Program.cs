@@ -46,7 +46,10 @@ namespace Lessons
             //Lessons.Task25();
             //Lessons.Task26();
             //Homework.Homework6789();
-            Lessons.Task27();
+            //Lessons.Task27();
+            //Lessons.Task28();
+            //Lessons.Task29();
+            Lessons.Task30();
 
             Console.ReadKey();
         }
