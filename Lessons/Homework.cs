@@ -312,7 +312,7 @@ namespace Lessons
              #####  
 
             */
-            for (int i = 1, j = heightTriangle; i <= heightTriangle; i++, j--)
+            for (int i = 1, j = heightTriangle - 1; i <= heightTriangle; i++, j--)
             {
                 Console.WriteLine(new string(' ', j) + new string('#', i));
             }
