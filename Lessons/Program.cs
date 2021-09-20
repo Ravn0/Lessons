@@ -40,7 +40,7 @@ namespace Lessons
             //Lessons.Task22();
             //Lessons.Task22_1();
             //Homework.Homework5();
-            Homework.Homework5_V_2();
+            //Homework.Homework5_V_2();
             //Lessons.Task23();
             //Lessons.Task24();
             //Lessons.Task25();
@@ -50,6 +50,10 @@ namespace Lessons
             //Lessons.Task28();
             //Lessons.Task29();
             //Lessons.Task30();
+            //Lessons.Task31();
+            //Lessons.Task32();
+            //Lessons.Task33();
+            Lessons.Task34();
 
             Console.ReadKey();
         }

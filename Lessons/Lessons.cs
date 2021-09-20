@@ -967,9 +967,196 @@ namespace Lessons
             Console.WriteLine(myArray3[0, 2]);
         }
         /**
-         * 
+         * Вывод двумерного массива
          */
         public static void Task31()
+        {
+            int[,] myArray = new int[,]
+            {
+                {2,45,12,51,51},
+                {6,7,8,3,1},
+                {1,2,65,78,13},
+                {6,3,151,5,65 }
+            };
+            foreach (var item in myArray)
+            {
+                Console.WriteLine(item);
+            }
+            Console.WriteLine(myArray.Rank);    // размерность массива 
+            int height = myArray.GetLength(0);
+            int width = myArray.GetLength(1);
+            for (int i = 0; i < height; i++)
+            {
+                for (int j = 0; j < width; j++)
+                {
+                    Console.Write(myArray[i, j] + "\t");
+                }
+                Console.WriteLine();
+            }
+        }
+        /**
+         * Заполнение двумерного массива случайными числами
+         * 
+         * Заполнение двумерного массива с клавиатуры
+         */
+        public static void Task32()
+        {
+            int[,] myArray = new int[2, 3];
+            GetRandomArray(myArray.GetLength(0), myArray.GetLength(1));
+            for (int i = 0; i < myArray.GetLength(0); i++)
+            {
+                for (int j = 0; j < myArray.GetLength(1); j++)
+                {
+                    Console.Write(myArray[i, j] + "\t");
+                }
+                Console.WriteLine();
+            }
+            for (int i = 0; i < myArray.GetLength(0); i++)
+            {
+                for (int j = 0; j < myArray.GetLength(1); j++)
+                {
+                    Console.WriteLine("Y: " + i + " X: " + j);
+                    myArray[i, j] = int.Parse(Console.ReadLine());
+                }
+            }
+            Console.WriteLine();
+            for (int i = 0; i < myArray.GetLength(0); i++)
+            {
+                for (int j = 0; j < myArray.GetLength(1); j++)
+                {
+                    Console.Write(myArray[i, j] + "\t");
+                }
+                Console.WriteLine();
+            }
+        }
+        /**
+         * Ступенчатые (зубчатые) массивы
+         */
+        public static void Task33()
+        {
+            int[][] myArray = new int[5][];
+            //int[,] myArray2 = new int[3, 5];
+            //int myArrayRank = myArray.Rank;
+            //int myArray2Rank = myArray2.Rank;
+            //int myArrayLength = myArray.Length;
+            //int myArray2Length = myArray2.Length;
+            myArray[0] = new int[5];
+            myArray[1] = new int[2];
+            myArray[2] = new int[8];
+            myArray[3] = new int[3];
+            myArray[4] = new int[7];
+            myArray[0][3] = 55;
+            int[] arr = myArray[0];
+            Console.WriteLine(myArray[0][3]);
+            Random random = new Random();
+            for (int i = 0; i < myArray.Length; i++)
+            {
+                for (int j = 0; j < myArray[i].Length; j++)
+                {
+                    myArray[i][j] = random.Next(100);
+                }
+            }
+            for (int i = 0; i < myArray.Length; i++)
+            {
+                for (int j = 0; j < myArray[i].Length; j++)
+                {
+                    Console.Write(myArray[i][j] + "\t");
+                }
+                Console.WriteLine();
+            }
+
+        }
+        /**
+         * Трёхмерные и более массивы
+         */
+        public static void Task34()
+        {
+            int[,,] myArray =
+                {
+                    {
+                        {2,3,5 },
+                        {69,7,4 }
+                    },
+
+                    {
+                        {4,31,24 },
+                        {64,7,33 }
+                    },
+
+                    {
+                        {4,21,9 },
+                        {8,12,1 }}
+                    };
+            myArray[0, 1, 2] = 55;
+            Console.WriteLine(myArray[0, 1, 2]);
+            Random random = new Random();
+            for (int i = 0; i < myArray.GetLength(0); i++)
+            {
+                for (int j = 0; j < myArray.GetLength(1); j++)
+                {
+                    for (int k = 0; k < myArray.GetLength(2); k++)
+                    {
+                        myArray[i, j, k] = random.Next(100);
+                    }
+                }
+            }
+            for (int i = 0; i < myArray.GetLength(0); i++)
+            {
+                Console.WriteLine("Page №: " + (i + 1));
+                for (int j = 0; j < myArray.GetLength(1); j++)
+                {
+                    for (int k = 0; k < myArray.GetLength(2); k++)
+                    {
+                        Console.Write(myArray[i, j, k] + "\t");
+                    }
+                    Console.WriteLine();
+                }
+                Console.WriteLine(new string('_', 20));
+            }
+            int[][][] myArrayStepped = new int[random.Next(3, 6)][][];
+            for (int i = 0; i < myArrayStepped.Length; i++)
+            {
+                myArrayStepped[i] = new int[random.Next(2, 6)][];
+                for (int j = 0; j < myArrayStepped[i].Length; j++)
+                {
+                    myArrayStepped[i][j] = new int[random.Next(2, 6)];
+                    for (int k = 0; k < myArrayStepped[i][j].Length; k++)
+                    {
+                        myArrayStepped[i][j][k] = random.Next(100);
+                    }
+                }
+            }
+            Console.WriteLine("\n\n\nNext BOOK");
+            for (int i = 0; i < myArrayStepped.Length; i++)
+            {
+                Console.WriteLine("Page №: " + (i + 1));
+                for (int j = 0; j < myArrayStepped[i].Length; j++)
+                {
+                    for (int k = 0; k < myArrayStepped[i][j].Length; k++)
+                    {
+                        Console.Write(myArrayStepped[i][j][k] + "\t");
+                    }
+                    Console.WriteLine();
+                }
+                Console.WriteLine(new string('_', 20));
+            }
+        }
+        /**
+         * Функции и методы
+         */
+
+        //      модификаторы тип_возвращаемого_значения название_метода
+        //
+        //
+        //
+        public static void Task35()
+        {
+
+        }
+        /**
+         * 
+         */
+        public static void Task36()
         {
 
         }
