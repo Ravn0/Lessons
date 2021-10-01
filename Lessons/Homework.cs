@@ -339,8 +339,7 @@ namespace Lessons
          * 
          * 5.   Треугольники в консоли C#
          */
-
-        public static void Homework5_V_2()
+        public static void Homework5V2()
         {
             int heightTriangle;
             Console.WriteLine("Введите высоту треугольника:");
@@ -455,7 +454,6 @@ namespace Lessons
          * 8.   Найти сумму четный числе в массиве.
          * 9.   Найти найменьшее число в масиве.
          */
-
         public static void Homework6789()
         {
             int[] myArray;
@@ -510,10 +508,61 @@ namespace Lessons
          * 10.   Написать метод который выводит на экран строку.
          *       Символы из которых сосоит строка и их количество вводятся пользователем
          */
-
         public static void Homework10()
         {
-
+            char symbol;    //Console.ReadKey().KeyChar; вместо следующих 6-ти строчек
+            Console.Write("Введите символ который хотите вывести: ");
+            while (!char.TryParse(Console.ReadLine(), out symbol))
+            {
+                Console.WriteLine("ОШИБКА! Вы ввели строку а не символ. Попробуйте еще раз.");
+                Console.Write("Введите символ который хотите вывести: ");
+            }
+            uint qtySymbols;
+            Console.Write("Сколько раз вы хотите вывести этот символ?: ");
+            while (!uint.TryParse(Console.ReadLine(), out qtySymbols))
+            {
+                Console.WriteLine("ОШИБКА! Число было введено не верно. Попробуйте еще раз.");
+                Console.Write("Сколько раз вы хотите вывести этот символ?: ");
+            }
+            Console.WriteLine("Результат:");
+            NewString(symbol, qtySymbols);
+        }
+        /**
+         * Домашнее задание из 35-го урока
+         * 
+         * 10.   Написать метод который выводит на экран строку.
+         *       Символы из которых сосоит строка и их количество вводятся пользователем
+         */
+        public static void Homework10V2()
+        {
+            Console.Write("Введите строку которую хотите вывести: ");
+            string symbol = Console.ReadLine();
+            uint qtySymbols;
+            Console.Write("Сколько раз вы хотите вывести эту строку?: ");
+            while (!uint.TryParse(Console.ReadLine(), out qtySymbols))
+            {
+                Console.WriteLine("ОШИБКА! Число было введено не верно. Попробуйте еще раз.");
+                Console.Write("Сколько раз вы хотите вывести этот символ?: ");
+            }
+            Console.WriteLine("Результат:");
+            PrintLine(symbol, qtySymbols);
+        }
+        /**
+         * Вспомогательный метод для Homework10()
+         */
+        static void NewString(char symbol, uint qtySymbols)
+        {
+            Console.WriteLine(new string(symbol, (int)qtySymbols));
+        }
+        /**
+         * Вспомогательный метод для Homework10V2()
+         */
+        static void PrintLine(string symbol, uint symbolCount)
+        {
+            for (int i = 0; i < symbolCount; i++)
+            {
+                Console.Write(symbol);
+            }
         }
         /**
          * Домашнее задание из 35-го урока
@@ -521,7 +570,6 @@ namespace Lessons
          * 11.   Написать метод для поиска индекса элемента массива (тип элементов в массиве - int),
          *       метод должен вернуть индекс первого найденного элемента (если он будет найдет).
          */
-
         public static void Homework11()
         {
 
@@ -531,7 +579,6 @@ namespace Lessons
          * 
          * 12.   Заполнить массив с клавиатуры
          */
-
         public static void Homework12()
         {
 
