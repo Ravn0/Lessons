@@ -1174,13 +1174,39 @@ namespace Lessons
          * Функции и методы
          */
 
-        //      модификаторы тип_возвращаемого_значения название_метода
-        //
-        //
-        //
+        //      модификаторы тип_возвращаемого_значения название_метода([параметры])
+        //      {
+        //          тело_метода;
+        //      }
         public static void Task35()
         {
-
+            int a, b, c;
+            a = int.Parse(Console.ReadLine());
+            b = int.Parse(Console.ReadLine());
+            c = Sum(a, b);
+            PrintResult(c);
+            PrintLine();
+        }
+        /**
+         * Вспомогательный метод для Task35()
+         */
+        static int Sum(int value_1, int value_2)
+        {
+            return value_1 + value_2;
+        }
+        /**
+         * Вспомогательный метод для Task35()
+         */
+        static void PrintResult(int result)
+        {
+            Console.WriteLine("Результат сложения: " + result);
+        }
+        /**
+         * Вспомогательный метод для Task35()
+         */
+        static void PrintLine()
+        {
+            Console.WriteLine("Метод PrintLine был вызван!");
         }
         /**
          * 

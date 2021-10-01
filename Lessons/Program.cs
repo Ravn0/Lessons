@@ -10,7 +10,7 @@ namespace Lessons
     {
         static void Main(string[] args)
         {
-            Lessons.Task3();
+            //Lessons.Task3();
             //Lessons.Task4();
             //Lessons.Task5();
             //Lessons.Task6();
@@ -55,6 +55,7 @@ namespace Lessons
             //Lessons.Task32();
             //Lessons.Task33();
             //Lessons.Task34();
+            Lessons.Task35();
 
             Console.ReadKey();
         }
