@@ -1246,9 +1246,31 @@ namespace Lessons
             return a + b;
         }
         /**
-         * 
+         * Область видимости, или контекст переменной 
+         * Конфликты областей видимости
          */
         public static void Task37()
+        {
+            int a = 2;
+            for (int i = 0; i < 10; i++)
+            {
+                i++;
+                a++;
+            }
+            a++;
+            Console.WriteLine(a);
+        }
+        /**
+         * Вспомогательный метод для Task37()
+         */
+        static void Foo()
+        {
+            int b = 9;
+        }
+        /**
+         * 
+         */
+        public static void Task38()
         {
 
         }
