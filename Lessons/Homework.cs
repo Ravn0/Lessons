@@ -572,7 +572,52 @@ namespace Lessons
          */
         public static void Homework11()
         {
-
+            uint rows;
+            Console.Write("Введите количетсво строк для массива: ");
+            while (!uint.TryParse(Console.ReadLine(), out rows))
+            {
+                Console.WriteLine("ОШИБКА! Число было введено не верно. Попробуйте еще раз.");
+                Console.Write("Введите количетсво строк для массива: ");
+            }
+            uint columns;
+            Console.Write("Введите количетсво столбцов для массива: ");
+            while (!uint.TryParse(Console.ReadLine(), out columns))
+            {
+                Console.WriteLine("ОШИБКА! Число было введено не верно. Попробуйте еще раз.");
+                Console.Write("Введите количетсво столбцов для массива: ");
+            }
+            int element;
+            Console.Write("Введите элемент который хотите найти (типа int): ");
+            while (!int.TryParse(Console.ReadLine(), out element))
+            {
+                Console.WriteLine("ОШИБКА! Число было введено не верно. Попробуйте еще раз.");
+                Console.Write("Введите элемент который хотите найти (типа int): ");
+            }
+            var myArray = Lessons.GetRandomArray((int)rows, (int)columns);
+            bool elementNotFouded = true;
+            int indexI = 0, indexJ = 0;
+            for (int i = 0; i < rows; i++)
+            {
+                for (int j = 0; j < columns; j++)
+                {
+                    Console.Write($"{myArray[i, j]}\t");
+                    if (elementNotFouded && myArray[i, j] == element)
+                    {
+                        indexI = i;
+                        indexJ = j;
+                        elementNotFouded = false;
+                    }
+                }
+                Console.WriteLine();
+            }
+            if (elementNotFouded)
+            {
+                Console.WriteLine("Элемент не был найден(");
+            }
+            else
+            {
+                Console.WriteLine($"Элемент найден.\nСтрока - {indexI}.\nСтолбец - {indexJ}");
+            }
         }
         /**
          * Домашнее задание из -го урока
