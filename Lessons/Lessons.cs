@@ -8,6 +8,10 @@ using System.Threading.Tasks;
 
 namespace Lessons
 {
+    /// <summary>
+    /// C# УРОКИ | C# ОТ НОВИЧКА К ПРОФЕССИОНАЛУ
+    /// By #SimpleCode (https://www.youtube.com/c/SimpleCodeIT/featured)
+    /// </summary>
     public class Lessons
     {
         /**
@@ -1188,7 +1192,7 @@ namespace Lessons
             PrintLine();
         }
         /**
-         * Вспомогательный метод для Task35()
+         * Вспомогательный метод для Task35() и Task36()
          */
         static int Sum(int value_1, int value_2)
         {
@@ -1209,9 +1213,42 @@ namespace Lessons
             Console.WriteLine("Метод PrintLine был вызван!");
         }
         /**
-         * 
+         * Перегрузка методов
          */
         public static void Task36()
+        {
+            int result = Sum(2, 3);
+            Console.WriteLine(result);
+            result = Sum(4, 5, 6);
+            Console.WriteLine(result);
+        }
+        /// <summary>
+        /// Вспомогательный метод для Task36().
+        /// Возвращает сумму двух целых чисел
+        /// </summary>
+        /// <param name="a">Первое число</param>
+        /// <param name="b">Второе число</param>
+        /// <param name="c">Третье число</param>
+        /// <returns></returns>
+        static int Sum(int a, int b, int c)
+        {
+            return a + b + c;
+        }
+        /// <summary>
+        /// Вспомогательный метод для Task36().
+        /// Возвращает сумму двух дробных чисел
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <returns></returns>
+        static double Sum(double a, double b)
+        {
+            return a + b;
+        }
+        /**
+         * 
+         */
+        public static void Task37()
         {
 
         }
