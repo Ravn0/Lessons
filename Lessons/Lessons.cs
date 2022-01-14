@@ -8,6 +8,17 @@ using System.Threading.Tasks;
 
 namespace Lessons
 {
+    /**
+    * class MyClass и struct MyStruct для Task39()
+    */
+    class MyClass
+    {
+
+    }
+    struct MyStruct
+    {
+
+    }
     /// <summary>
     /// C# УРОКИ | C# ОТ НОВИЧКА К ПРОФЕССИОНАЛУ
     /// By #SimpleCode (https://www.youtube.com/c/SimpleCodeIT/featured)
@@ -1292,9 +1303,24 @@ namespace Lessons
             arr[0] = 5;
         }
         /**
-         * 
+         * что такое null
          */
         public static void Task39()
+        {
+            bool b;
+            int a;
+            double d;
+            Random random;
+            int[] arr;
+            MyClass myClass;
+            MyStruct myStruct;
+            arr = new int[10];
+            arr = null;
+        }
+        /**
+         * 
+         */
+        public static void Task40()
         {
 
         }
