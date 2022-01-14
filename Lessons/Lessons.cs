@@ -1247,6 +1247,7 @@ namespace Lessons
         }
         /**
          * Область видимости, или контекст переменной 
+         * 
          * Конфликты областей видимости
          */
         public static void Task37()
@@ -1261,16 +1262,39 @@ namespace Lessons
             Console.WriteLine(a);
         }
         /**
-         * Вспомогательный метод для Task37()
+         * Ссылочные (reference types) и значимые (value types) типы
+         * 
+         * Стек(stack) и куча (heap)
          */
-        static void Foo()
+        public static void Task38()
         {
-            int b = 9;
+            int a = 1;
+            Foo(a);
+            Console.WriteLine(a);
+
+            int[] arr = new int[1];
+            arr[0] = 1;
+            Bar(arr);
+            Console.WriteLine(arr[0]);
+        }
+        /**
+         * Вспомогательный метод для Task38()
+         */
+        static void Foo(int a)
+        {
+            a = 5;
+        }
+        /**
+         * Вспомогательный метод для Task38()
+         */
+        static void Bar(int[] arr)
+        {
+            arr[0] = 5;
         }
         /**
          * 
          */
-        public static void Task38()
+        public static void Task39()
         {
 
         }
