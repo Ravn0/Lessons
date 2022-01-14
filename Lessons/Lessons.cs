@@ -1318,9 +1318,23 @@ namespace Lessons
             arr = null;
         }
         /**
-         * 
+         * оператор null-объединения    ??
          */
         public static void Task40()
+        {
+            string str = null;
+            string result = str ?? "Нет данных";
+            Console.WriteLine(result);
+            str = "test";
+            Console.WriteLine("Количиство символов в строке " + str.Length);
+            str = null;
+            result = str ?? string.Empty;
+            Console.WriteLine("Количиство символов в строке " + result.Length);
+        }
+        /**
+         * 
+         */
+        public static void Task41()
         {
 
         }

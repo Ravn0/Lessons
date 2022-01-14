@@ -13,9 +13,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ultimate Predictor", "Ultim
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoApp", "TodoApp\TodoApp.csproj", "{4516ED28-18B8-4905-9563-1B777A9A022B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LessonsCore", "LessonsCore\LessonsCore.csproj", "{2284B8F9-EEF1-423E-87D5-D44DF2D35B65}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LessonsCore", "LessonsCore\LessonsCore.csproj", "{2284B8F9-EEF1-423E-87D5-D44DF2D35B65}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageProcessingLesson", "ImageProcessingLesson\ImageProcessingLesson.csproj", "{8F95C00A-E3FB-4D05-B142-FA555A66B58B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task40WF", "Task40WF\Task40WF.csproj", "{BA2637ED-2822-4CD2-8D6A-C3DA263B9FF3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{8F95C00A-E3FB-4D05-B142-FA555A66B58B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8F95C00A-E3FB-4D05-B142-FA555A66B58B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8F95C00A-E3FB-4D05-B142-FA555A66B58B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA2637ED-2822-4CD2-8D6A-C3DA263B9FF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA2637ED-2822-4CD2-8D6A-C3DA263B9FF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA2637ED-2822-4CD2-8D6A-C3DA263B9FF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA2637ED-2822-4CD2-8D6A-C3DA263B9FF3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
