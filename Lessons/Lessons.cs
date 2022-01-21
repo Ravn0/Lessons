@@ -1332,9 +1332,30 @@ namespace Lessons
             Console.WriteLine("Количиство символов в строке " + result.Length);
         }
         /**
-         * 
+         * оператор присваивания объединения со значением NULL ??=
          */
         public static void Task41()
+        {
+            string str = null;
+            str ??= string.Empty;
+            Console.WriteLine("Количество символов в строке " + str.Length);
+
+            int[] myArray = GetArray();
+            myArray ??= new int[0];
+            Console.WriteLine("Количество элементов в массиве " + myArray.Length);
+        }
+        /**
+         * Вспомогательный метод для Task41()
+         */
+        static int[] GetArray()
+        {
+            int[] myArray = null;
+            return myArray;
+        }
+        /**
+         * 
+         */
+        public static void Task42()
         {
 
         }
