@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using Task40and42WF;
 
 namespace Lessons
 {
@@ -1332,7 +1333,7 @@ namespace Lessons
             Console.WriteLine("Количиство символов в строке " + result.Length);
         }
         /**
-         * оператор присваивания объединения со значением NULL ??=
+         * Оператор присваивания объединения со значением NULL ??=
          */
         public static void Task41()
         {
@@ -1345,7 +1346,7 @@ namespace Lessons
             Console.WriteLine("Количество элементов в массиве " + myArray.Length);
         }
         /**
-         * Вспомогательный метод для Task41()
+         * Вспомогательный метод для Task41() и Task42()
          */
         static int[] GetArray()
         {
@@ -1353,9 +1354,40 @@ namespace Lessons
             return myArray;
         }
         /**
-         * 
+         * Оператор условного null ?.
          */
         public static void Task42()
+        {
+            int[] myArray = GetArray();
+            Console.WriteLine("Сумма элементов массива " + (myArray?.Sum() ?? 0));
+
+            myArray = GetArray42();
+            Console.WriteLine("Сумма элементов массива " + (myArray?.Sum() ?? 0));
+
+            Person person = GetPerson();
+            string phoneNumber = person?.Contacts?.PhoneNumber ?? "Нет данных"; // Если хотя бы на одном из уровней переменной person будет null то на вывод мы получим "Нет данных"
+            Console.WriteLine(phoneNumber);
+        }
+        /**
+         * Вспомогательный метод для Task42()
+         */
+        static int[] GetArray42()
+        {
+            int[] myArray = { 1, 2, 3 };
+            return myArray;
+        }
+        /**
+         * Вспомогательный метод для Task42()
+         */
+        static Person GetPerson()
+        {
+            Person person = new Person() { Contacts = new Contacts() { PhoneNumber = "1234567890" } };
+            return person;
+        }
+        /**
+         * 
+         */
+        public static void Task43()
         {
 
         }

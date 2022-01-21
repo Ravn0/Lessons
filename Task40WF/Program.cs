@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Task40WF
+namespace Task40and42WF
 {
     static class Program
     {

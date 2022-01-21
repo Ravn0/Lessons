@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Task40WF
+namespace Task40and42WF
 {
     public partial class Form1 : Form
     {
@@ -23,7 +23,7 @@ namespace Task40WF
                 new Person() { FirstName = "Мартин", MiddleName="Игоревич", SecondName="Дугин"},
                 new Person() { FirstName = "Кей", SecondName="Альтос"},
                 new Person() { FirstName = "Мэг", SecondName="Ранш"},
-                new Person() { FirstName = "unknown"}
+                new Person() { FirstName = "unknown", Contacts = new Contacts(){PhoneNumber = "1234567890" } }
             };
         }
 
@@ -33,7 +33,7 @@ namespace Task40WF
             var persons = GetPersons();
             foreach (var person in persons)
             {
-                listBox1.Items.Add(person.GetFullName());
+                listBox1.Items.Add($"{person.GetFullName()} | {person.GetPhoneNumber()}");
             }
         }
     }

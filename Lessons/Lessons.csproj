@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{3C0A0CCD-365D-4146-9DBC-BBAE5BD55820}</ProjectGuid>
     <OutputType>Exe</OutputType>
-	<LangVersion>8.0</LangVersion>
+    <LangVersion>8.0</LangVersion>
     <RootNamespace>Lessons</RootNamespace>
     <AssemblyName>Lessons</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
@@ -51,6 +51,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Task40WF\Task40and42WF.csproj">
+      <Project>{ba2637ed-2822-4cd2-8d6a-c3da263b9ff3}</Project>
+      <Name>Task40and42WF</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
