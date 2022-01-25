@@ -65,7 +65,9 @@ namespace Lessons
             //Lessons.Task39();
             //Lessons.Task40();
             //Lessons.Task41();
-            Lessons.Task42();
+            //Lessons.Task42();
+            Lessons.Task43();
+            Lessons.Task43_2();
 
             Console.ReadKey();
         }

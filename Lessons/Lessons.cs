@@ -20,6 +20,21 @@ namespace Lessons
     {
 
     }
+    /**
+    * class MyClass43 и struct MyStruct43 для Task43()
+    */
+    class MyClass43
+    {
+        public int a;
+        public double b;
+        public float c;
+    }
+    struct MyStruct43
+    {
+        public int a;
+        public double b;
+        public float c;
+    }
     /// <summary>
     /// C# УРОКИ | C# ОТ НОВИЧКА К ПРОФЕССИОНАЛУ
     /// By #SimpleCode (https://www.youtube.com/c/SimpleCodeIT/featured)
@@ -1385,9 +1400,87 @@ namespace Lessons
             return person;
         }
         /**
+         * Ключевое слово ref
          * 
+         * Передача аргументов по ссылке
          */
         public static void Task43()
+        {
+            int a = 2;
+            Foo(ref a);
+            Console.WriteLine(a);
+
+            MyStruct43 myStruct = new MyStruct43();
+            Foo(ref myStruct);
+
+            MyClass43 myClass = new MyClass43();
+            Foo(myClass);
+
+            int[] myArray = { 1, 4, 6 };
+            Bar(myArray);
+
+            Bar(ref myArray);
+
+            int[] myArray43 = { 1, 4, 6 };
+            Bar43(myArray43);
+
+            Bar43(ref myArray43);
+        }
+        /**
+         * Вспомогательный методы для Task43()
+         */
+        static void Foo(ref int a)
+        {
+            a = -5;
+        }
+        static void Foo(ref MyStruct43 myStruct)
+        {
+            myStruct.a = -5;
+        }
+        static void Foo(MyClass43 myClass)
+        {
+            myClass.a = -5;
+        }
+        static void Bar(ref int[] arr)
+        {
+            arr = null;
+        }
+        static void Bar43(int[] arr)
+        {
+            arr = new int[10];
+        }
+        static void Bar43(ref int[] arr)
+        {
+            arr = new int[10];
+        }
+        /**
+         * Ссылочные локальные переменные 
+         * 
+         * Возвращаемые ссылочные значения
+         */
+        public static void Task43_2()
+        {
+            int[] arr = { 2, 6, 1 };
+            int b = arr[0];
+            b = -5;
+
+            ref int a = ref arr[0];
+            a = -5;
+
+            ref int c = ref Foo(arr);
+            c = -5;
+        }
+        /**
+         * Вспомогательный метод для Task43_2()
+         */
+        static ref int Foo(int[] numbers)
+        {
+            return ref numbers[0];
+        }
+        /**
+         * 
+         */
+        public static void Task44()
         {
 
         }
