@@ -620,11 +620,81 @@ namespace Lessons
             }
         }
         /**
+         * Домашнее задание из 43-го урока
+         * 
+         * 12.   Написать метод Resize изменяющий количиство елементов массива 
+         *       (метод должен иметь возможность увеличить или уменьшить количество элементов массива).
+         */
+        public static void Homework12()
+        {
+            uint size;
+            Console.Write("Введите количетсво элементов: ");
+            while (!uint.TryParse(Console.ReadLine(), out size))
+            {
+                Console.WriteLine("ОШИБКА! Число было введено не верно. Попробуйте еще раз.");
+                Console.Write("Введите количетсво элементов: ");
+            }
+            var myArray = GetRandomArray((int)size);
+            PrintArray(ref myArray);
+            Console.Write("Введите новое количетсво элементов: ");
+            while (!uint.TryParse(Console.ReadLine(), out size))
+            {
+                Console.WriteLine("ОШИБКА! Число было введено не верно. Попробуйте еще раз.");
+                Console.Write("Введите новое количетсво элементов: ");
+            }
+            Resize(ref myArray, ref size);
+            PrintArray(ref myArray);
+
+            string[] strArray = { "test", "hello", "world" };
+            Resize(ref strArray, ref size);
+            PrintArray(ref strArray);
+        }
+        /**
+         * Вспомогательный метод для Homework12()
+         */
+        static void Resize<T>(ref T[] arr, ref uint newSize)
+        {
+            T[] newArray = new T[newSize];
+            if (newSize == arr.Length)
+            {
+                return;
+            }
+            for (int i = 0; i < arr.Length && i < newArray.Length; i++)
+            {
+                newArray[i] = arr[i];
+            }
+            arr = newArray;
+        }
+        /**
+         * Вспомогательный метод для Homework12()
+         */
+        public static int[] GetRandomArray(int size)
+        {
+            Random random = new Random();
+            var result = new int[size];
+            for (int i = 0; i < size; i++)
+            {
+                result[i] = random.Next(100);
+            }
+            return result;
+        }
+        /**
+         * Вспомогательный метод для Homework12()
+         */
+        public static void PrintArray<T>(ref T[] myArray)
+        {
+            for (int i = 0; i < myArray.Length; i++)
+            {
+                Console.Write($"{myArray[i]} ");
+            }
+            Console.WriteLine();
+        }
+        /**
          * Домашнее задание из -го урока
          * 
          * 12.   Заполнить массив с клавиатуры
          */
-        public static void Homework12()
+        public static void Homework13()
         {
 
         }
