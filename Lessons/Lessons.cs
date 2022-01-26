@@ -1478,9 +1478,27 @@ namespace Lessons
             return ref numbers[0];
         }
         /**
+         * ключевое слово out
          * 
+         * разница между ref и out
          */
         public static void Task44()
+        {
+            Bar(out int a);
+            Console.WriteLine(a);
+
+            string str = Console.ReadLine();
+            int.TryParse(str, out int result);
+            Console.WriteLine(result);
+        }
+        static void Bar(out int value)
+        {
+            value = 5;
+        }
+        /**
+         * 
+         */
+        public static void Task45()
         {
 
         }
