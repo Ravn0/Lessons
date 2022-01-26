@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameOfLife", "GameOfLife\Ga
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stars", "Stars\Stars.csproj", "{C5EC7D65-8492-4731-B7EE-0AA7AA3FBB80}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BenchmarkLesson45", "BenchmarkLesson45\BenchmarkLesson45.csproj", "{94D48F2A-7682-44A1-A900-67B7B06C4536}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{C5EC7D65-8492-4731-B7EE-0AA7AA3FBB80}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C5EC7D65-8492-4731-B7EE-0AA7AA3FBB80}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C5EC7D65-8492-4731-B7EE-0AA7AA3FBB80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94D48F2A-7682-44A1-A900-67B7B06C4536}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94D48F2A-7682-44A1-A900-67B7B06C4536}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94D48F2A-7682-44A1-A900-67B7B06C4536}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94D48F2A-7682-44A1-A900-67B7B06C4536}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -70,7 +70,9 @@ namespace Lessons
             //Lessons.Task43_2();
             //Homework.Homework12();
             //Homework.Homework13();
-            Homework.Homework14();
+            //Homework.Homework14();
+            //Lessons.Task44();
+            Lessons.Task45();
 
             Console.ReadKey();
         }
