@@ -690,11 +690,117 @@ namespace Lessons
             Console.WriteLine();
         }
         /**
-         * Домашнее задание из -го урока
+         * Домашнее задание из 43-го урока
          * 
-         * 12.   Заполнить массив с клавиатуры
+         * 13.   Написать методы для добавления элемента в начало массива,
+         *       в конец массива и по указанному индексу.
          */
         public static void Homework13()
+        {
+            int[] myArray = GetRandomArray(10);
+            PrintArray(ref myArray);
+            InsertIntoArrayFirst(ref myArray, -1);
+            PrintArray(ref myArray);
+            InsertIntoArrayLast(ref myArray, -1);
+            PrintArray(ref myArray);
+            InsertIntoArray(ref myArray, -1, 6);
+            PrintArray(ref myArray);
+        }
+        /**
+         * Вспомогательный метод для Homework13()
+         */
+        public static void InsertIntoArray<T>(ref T[] myArray, T value, int index)
+        {
+            T[] newArray = new T[myArray.Length + 1];
+            if (index < 0 || index >= newArray.Length)
+            {
+                Console.WriteLine("Данный индекс не входит в рамки массива");
+                return;
+            }
+            for (int i = 0; i < index; i++)
+            {
+                newArray[i] = myArray[i];
+            }
+            newArray[index] = value;
+            for (int i = index; i < myArray.Length; i++)
+            {
+                newArray[i + 1] = myArray[i];
+            }
+            myArray = newArray;
+        }
+        /**
+         * Вспомогательный метод для Homework13()
+         */
+        public static void InsertIntoArrayFirst<T>(ref T[] myArray, T value)
+        {
+            InsertIntoArray(ref myArray, value, 0);
+        }
+        /**
+         * Вспомогательный метод для Homework13()
+         */
+        public static void InsertIntoArrayLast<T>(ref T[] myArray, T value)
+        {
+            InsertIntoArray(ref myArray, value, myArray.Length);
+        }
+        /**
+         * Домашнее задание из 43-го урока
+         * 
+         * 14.   Написать методы для удаления первого элемента массива,
+         *       последнего элемента массива 
+         *       и элемента по указаному индексу
+         */
+        public static void Homework14()
+        {
+            int[] myArray = GetRandomArray(10);
+            PrintArray(ref myArray);
+            RemoveFromArrayFirst(ref myArray);
+            PrintArray(ref myArray);
+            RemoveFromArrayLast(ref myArray);
+            PrintArray(ref myArray);
+            RemoveFromArray(ref myArray, 4);
+            PrintArray(ref myArray);
+        }
+        /**
+ * Вспомогательный метод для Homework14()
+ */
+        public static void RemoveFromArray<T>(ref T[] myArray, int index)
+        {
+            T[] newArray = new T[myArray.Length - 1];
+            if (index < 0 || index > newArray.Length)
+            {
+                Console.WriteLine("Данный индекс не входит в рамки массива");
+                return;
+            }
+            for (int i = 0; i < index; i++)
+            {
+                newArray[i] = myArray[i];
+            }
+            for (int i = index + 1; i < myArray.Length; i++)
+            {
+                newArray[i - 1] = myArray[i];
+            }
+            myArray = newArray;
+        }
+        /**
+         * Вспомогательный метод для Homework14()
+         */
+        public static void RemoveFromArrayFirst<T>(ref T[] myArray)
+        {
+            RemoveFromArray(ref myArray, 0);
+        }
+        /**
+         * Вспомогательный метод для Homework14()
+         */
+        public static void RemoveFromArrayLast<T>(ref T[] myArray)
+        {
+            RemoveFromArray(ref myArray, myArray.Length - 1);
+        }
+        /**
+         * Домашнее задание из -го урока
+         * 
+         * 15.   Заполнить массив с клавиатуры
+         */
+        public static void Homework15()
         {
 
         }
