@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task40and42WF", "Task40WF\T
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameOfLife", "GameOfLife\GameOfLife.csproj", "{5F8A5E66-589F-4843-BC66-925DCE171D6B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stars", "Stars\Stars.csproj", "{C5EC7D65-8492-4731-B7EE-0AA7AA3FBB80}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{5F8A5E66-589F-4843-BC66-925DCE171D6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F8A5E66-589F-4843-BC66-925DCE171D6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F8A5E66-589F-4843-BC66-925DCE171D6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5EC7D65-8492-4731-B7EE-0AA7AA3FBB80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5EC7D65-8492-4731-B7EE-0AA7AA3FBB80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5EC7D65-8492-4731-B7EE-0AA7AA3FBB80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5EC7D65-8492-4731-B7EE-0AA7AA3FBB80}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
