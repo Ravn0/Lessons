@@ -1514,9 +1514,42 @@ namespace Lessons
             Console.WriteLine(value);
         }
         /**
-         * 
+         * Ключевое слово params
          */
         public static void Task46()
+        {
+            int result = Sum("test", 5, 10, 4, 7, 9);
+            Console.WriteLine(result);
+
+            Foo("test", 5, 'q', 5.89f, true);
+        }
+        /**
+         * Вспомогательный метод для Task46()
+         */
+        static int Sum(string massege, params int[] parameters) //params в параметрах только один и только в конце
+        {
+            int result = 0;
+            for (int i = 0; i < parameters.Length; i++)
+            {
+                result += parameters[i];
+            }
+            return result;
+        }
+        /**
+         * Вспомогательный метод для Task46()
+         */
+        static void Foo(params object[] parameters)
+        {
+            string messege = "Тиа данных {0}, значение {1}";
+            foreach (var item in parameters)
+            {
+                Console.WriteLine(messege, item.GetType(), item);
+            }
+        }
+        /**
+         * 
+         */
+        public static void Task47()
         {
 
         }
