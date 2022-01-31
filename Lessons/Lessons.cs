@@ -35,6 +35,14 @@ namespace Lessons
         public double b;
         public float c;
     }
+    /**
+    * class Item для Task49()
+    */
+    class Item
+    {
+        public int Value { get; set; }
+        public Item Child { get; set; }
+    }
     /// <summary>
     /// C# УРОКИ | C# ОТ НОВИЧКА К ПРОФЕССИОНАЛУ
     /// By #SimpleCode (https://www.youtube.com/c/SimpleCodeIT/featured)
@@ -1577,9 +1585,68 @@ namespace Lessons
             int result = Sum(enableLogging: true, b: secondValue, a: firstValue);
         }
         /**
+         * Рекурсия
          * 
+         * Методы и стек
+         * 
+         * Переполнения стека
          */
         public static void Task49()
+        {
+            Foo49(0);
+            Item item = InitItem();
+            Print49(item);
+            for (Item i = item; i != null; i = i.Child)
+            {
+                Console.WriteLine(i.Value);
+            }
+        }
+        /**
+         * Вспомогательный метод для Task49 
+         */
+        static void Foo49(int i)
+        {
+            Console.WriteLine(i);
+            if (i >= 3)
+            {
+                return;
+            }
+            i++;
+            Foo49(i);
+        }
+        /**
+         * Вспомогательный метод для Task49 
+         */
+        static Item InitItem()
+        {
+            return new Item()
+            {
+                Value = 5,
+                Child = new Item()
+                {
+                    Value = 10,
+                    Child = new Item()
+                    {
+                        Value = 2
+                    }
+                }
+            };
+        }
+        /**
+         * Вспомогательный метод для Task49 
+         */
+        static void Print49(Item item)
+        {
+            if (item != null)
+            {
+                Console.WriteLine(item.Value);
+                Print49(item.Child);
+            }
+        }
+        /**
+         * 
+         */
+        public static void Task50()
         {
 
         }
