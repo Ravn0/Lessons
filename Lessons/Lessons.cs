@@ -1554,7 +1554,7 @@ namespace Lessons
             int result = Sum(5, 10, true);
         }
         /**
-         * Вспомогательный метод для Task47()
+         * Вспомогательный метод для Task47() и Task48() 
          */
         static int Sum(int a, int b, bool enableLogging = false) //параметры по умолчанию в конце списка всех параметров
         {
@@ -1568,9 +1568,18 @@ namespace Lessons
             return result;
         }
         /**
-         * 
+         * Именованные параметры
          */
         public static void Task48()
+        {
+            int firstValue = 10;
+            int secondValue = 5;
+            int result = Sum(enableLogging: true, b: secondValue, a: firstValue);
+        }
+        /**
+         * 
+         */
+        public static void Task49()
         {
 
         }
