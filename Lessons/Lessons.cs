@@ -1547,9 +1547,30 @@ namespace Lessons
             }
         }
         /**
-         * 
+         * Необязательные параметры методов
          */
         public static void Task47()
+        {
+            int result = Sum(5, 10, true);
+        }
+        /**
+         * Вспомогательный метод для Task47()
+         */
+        static int Sum(int a, int b, bool enableLogging = false) //параметры по умолчанию в конце списка всех параметров
+        {
+            int result = a + b;
+            if (enableLogging)
+            {
+                Console.WriteLine("Значение переменной a = " + a);
+                Console.WriteLine("Значение переменной b = " + b);
+                Console.WriteLine("Результат сложения = " + result);
+            }
+            return result;
+        }
+        /**
+         * 
+         */
+        public static void Task48()
         {
 
         }
