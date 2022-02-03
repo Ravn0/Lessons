@@ -817,11 +817,49 @@ namespace Lessons
             }
         }
         /**
-         * Домашнее задание из -го урока
+         * Домашнее задание из 49-го урока
          * 
-         * 16.   Заполнить массив с клавиатуры
+         * 16.   Найти сумму элементов массива с помощью рекурсии.
          */
         public static void Homework16()
+        {
+            int[] myArray = { 10, 5, 3, 2 };
+            SumArray(myArray);
+            int result = Sum(myArray);
+            Console.WriteLine(result);
+        }
+        /**
+         * Вспомогательный метод для Homework16()
+         */
+        public static void SumArray(in int[] myArray, int index = 0, int result = 0)
+        {
+            if (index < myArray.Length)
+            {
+                result += myArray[index];
+                SumArray(myArray, index + 1, result);
+            }
+            if (index == myArray.Length)
+            {
+                Console.WriteLine(result);
+            }
+        }
+        /**
+         * Вспомогательный метод для Homework16()
+         */
+        public static int Sum(in int[] myArray, int index = 0)
+        {
+            if (index >= myArray.Length)
+            {
+                return 0;
+            }
+            return myArray[index] + Sum(myArray, index + 1);
+        }
+        /**
+         * Домашнее задание из -го урока
+         * 
+         * 17.   Заполнить массив с клавиатуры
+         */
+        public static void Homework17()
         {
 
         }
