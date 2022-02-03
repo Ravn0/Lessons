@@ -871,7 +871,7 @@ namespace Lessons
             Console.WriteLine(result);
         }
         /**
-         * Вспомогательный метод для Homework16()
+         * Вспомогательный метод для Homework17()
          */
         public static int SumSpecial(in int value)
         {
@@ -882,7 +882,7 @@ namespace Lessons
             return value % 10 + SumSpecial(value / 10);
         }
         /**
-         * Вспомогательный метод для Homework16()
+         * Вспомогательный метод для Homework17()
          */
         public static int SumSpecialWhile(int value)
         {
@@ -890,7 +890,7 @@ namespace Lessons
             while (value > 0)
             {
                 result += value % 10;
-                value = value / 10;
+                value /= 10;
             }
             return result;
         }
