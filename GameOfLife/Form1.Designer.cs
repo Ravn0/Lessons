@@ -31,21 +31,21 @@ namespace GameOfLife
         {
             this.components = new System.ComponentModel.Container();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.bStop = new System.Windows.Forms.Button();
+            this.bStart = new System.Windows.Forms.Button();
+            this.nudDensity = new System.Windows.Forms.NumericUpDown();
+            this.label2 = new System.Windows.Forms.Label();
             this.nudResolution = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.nudDensity = new System.Windows.Forms.NumericUpDown();
-            this.label2 = new System.Windows.Forms.Label();
-            this.bStart = new System.Windows.Forms.Button();
-            this.bStop = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudDensity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudResolution)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudDensity)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -73,6 +73,61 @@ namespace GameOfLife
             this.splitContainer1.SplitterDistance = 198;
             this.splitContainer1.TabIndex = 0;
             // 
+            // bStop
+            // 
+            this.bStop.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.bStop.Location = new System.Drawing.Point(13, 149);
+            this.bStop.Name = "bStop";
+            this.bStop.Size = new System.Drawing.Size(120, 40);
+            this.bStop.TabIndex = 6;
+            this.bStop.Text = "Stop";
+            this.bStop.UseVisualStyleBackColor = true;
+            this.bStop.Click += new System.EventHandler(this.bStop_Click);
+            // 
+            // bStart
+            // 
+            this.bStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.bStart.Location = new System.Drawing.Point(13, 103);
+            this.bStart.Name = "bStart";
+            this.bStart.Size = new System.Drawing.Size(120, 40);
+            this.bStart.TabIndex = 5;
+            this.bStart.Text = "Start";
+            this.bStart.UseVisualStyleBackColor = true;
+            this.bStart.Click += new System.EventHandler(this.bStart_Click);
+            // 
+            // nudDensity
+            // 
+            this.nudDensity.Location = new System.Drawing.Point(13, 68);
+            this.nudDensity.Maximum = new decimal(new int[] {
+            25,
+            0,
+            0,
+            0});
+            this.nudDensity.Minimum = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
+            this.nudDensity.Name = "nudDensity";
+            this.nudDensity.Size = new System.Drawing.Size(120, 20);
+            this.nudDensity.TabIndex = 4;
+            this.nudDensity.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nudDensity.Value = new decimal(new int[] {
+            25,
+            0,
+            0,
+            0});
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(10, 49);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(60, 16);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Density";
+            // 
             // nudResolution
             // 
             this.nudResolution.Location = new System.Drawing.Point(13, 26);
@@ -82,7 +137,7 @@ namespace GameOfLife
             0,
             0});
             this.nudResolution.Minimum = new decimal(new int[] {
-            1,
+            2,
             0,
             0,
             0});
@@ -116,56 +171,6 @@ namespace GameOfLife
             this.pictureBox1.TabStop = false;
             this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
             // 
-            // nudDensity
-            // 
-            this.nudDensity.Location = new System.Drawing.Point(13, 68);
-            this.nudDensity.Minimum = new decimal(new int[] {
-            2,
-            0,
-            0,
-            0});
-            this.nudDensity.Name = "nudDensity";
-            this.nudDensity.Size = new System.Drawing.Size(120, 20);
-            this.nudDensity.TabIndex = 4;
-            this.nudDensity.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.nudDensity.Value = new decimal(new int[] {
-            2,
-            0,
-            0,
-            0});
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(10, 49);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 16);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Density";
-            // 
-            // bStart
-            // 
-            this.bStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.bStart.Location = new System.Drawing.Point(13, 103);
-            this.bStart.Name = "bStart";
-            this.bStart.Size = new System.Drawing.Size(120, 40);
-            this.bStart.TabIndex = 5;
-            this.bStart.Text = "Start";
-            this.bStart.UseVisualStyleBackColor = true;
-            this.bStart.Click += new System.EventHandler(this.bStart_Click);
-            // 
-            // bStop
-            // 
-            this.bStop.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.bStop.Location = new System.Drawing.Point(13, 149);
-            this.bStop.Name = "bStop";
-            this.bStop.Size = new System.Drawing.Size(120, 40);
-            this.bStop.TabIndex = 6;
-            this.bStop.Text = "Stop";
-            this.bStop.UseVisualStyleBackColor = true;
-            this.bStop.Click += new System.EventHandler(this.bStop_Click);
-            // 
             // timer1
             // 
             this.timer1.Interval = 40;
@@ -178,17 +183,16 @@ namespace GameOfLife
             this.ClientSize = new System.Drawing.Size(1262, 557);
             this.Controls.Add(this.splitContainer1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "GameOfLife";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.nudDensity)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudResolution)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudDensity)).EndInit();
             this.ResumeLayout(false);
 
         }
