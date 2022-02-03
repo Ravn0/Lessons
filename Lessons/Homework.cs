@@ -855,11 +855,51 @@ namespace Lessons
             return myArray[index] + Sum(myArray, index + 1);
         }
         /**
-         * Домашнее задание из -го урока
+         * Домашнее задание из 49-го урока
          * 
-         * 17.   Заполнить массив с клавиатуры
+         * 17.   Найти сумму цифр числа с помощью рекурсии.
+         * 
+         *       561=12
          */
         public static void Homework17()
+        {
+            int myValue = 561;
+            int result = SumSpecial(myValue);
+            Console.WriteLine(result);
+            result = 0;
+            result = SumSpecialWhile(myValue);
+            Console.WriteLine(result);
+        }
+        /**
+         * Вспомогательный метод для Homework16()
+         */
+        public static int SumSpecial(in int value)
+        {
+            if (value < 10)
+            {
+                return value;
+            }
+            return value % 10 + SumSpecial(value / 10);
+        }
+        /**
+         * Вспомогательный метод для Homework16()
+         */
+        public static int SumSpecialWhile(int value)
+        {
+            int result = 0;
+            while (value > 0)
+            {
+                result += value % 10;
+                value = value / 10;
+            }
+            return result;
+        }
+        /**
+         * Домашнее задание из -го урока
+         * 
+         * 18.   Заполнить массив с клавиатуры
+         */
+        public static void Homework18()
         {
 
         }
