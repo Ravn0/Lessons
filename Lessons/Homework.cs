@@ -796,11 +796,32 @@ namespace Lessons
             RemoveFromArray(ref myArray, myArray.Length - 1);
         }
         /**
-         * Домашнее задание из -го урока
+         * Домашнее задание из 49-го урока
          * 
-         * 15.   Заполнить массив с клавиатуры
+         * 15.   Реализовать вывод массива с помощью рекурсии.
          */
         public static void Homework15()
+        {
+            var myArray = GetRandomArray(10);
+            PrintArray(myArray);
+        }
+        /**
+         * Вспомогательный метод для Homework15()
+         */
+        public static void PrintArray<T>(in T[] myArray, int index = 0)
+        {
+            if (index < myArray.Length)
+            {
+                Console.Write($"{myArray[index]} ");
+                PrintArray(myArray, ++index);
+            }
+        }
+        /**
+         * Домашнее задание из -го урока
+         * 
+         * 16.   Заполнить массив с клавиатуры
+         */
+        public static void Homework16()
         {
 
         }
