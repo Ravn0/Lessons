@@ -35,6 +35,14 @@ namespace Lessons
         public double b;
         public float c;
     }
+    /**
+    * class Item для Task49()
+    */
+    class Item
+    {
+        public int Value { get; set; }
+        public Item Child { get; set; }
+    }
     /// <summary>
     /// C# УРОКИ | C# ОТ НОВИЧКА К ПРОФЕССИОНАЛУ
     /// By #SimpleCode (https://www.youtube.com/c/SimpleCodeIT/featured)
@@ -1514,9 +1522,131 @@ namespace Lessons
             Console.WriteLine(value);
         }
         /**
-         * 
+         * Ключевое слово params
          */
         public static void Task46()
+        {
+            int result = Sum("test", 5, 10, 4, 7, 9);
+            Console.WriteLine(result);
+
+            Foo("test", 5, 'q', 5.89f, true);
+        }
+        /**
+         * Вспомогательный метод для Task46()
+         */
+        static int Sum(string massege, params int[] parameters) //params в параметрах только один и только в конце
+        {
+            int result = 0;
+            for (int i = 0; i < parameters.Length; i++)
+            {
+                result += parameters[i];
+            }
+            return result;
+        }
+        /**
+         * Вспомогательный метод для Task46()
+         */
+        static void Foo(params object[] parameters)
+        {
+            string messege = "Тиа данных {0}, значение {1}";
+            foreach (var item in parameters)
+            {
+                Console.WriteLine(messege, item.GetType(), item);
+            }
+        }
+        /**
+         * Необязательные параметры методов
+         */
+        public static void Task47()
+        {
+            int result = Sum(5, 10, true);
+        }
+        /**
+         * Вспомогательный метод для Task47() и Task48() 
+         */
+        static int Sum(int a, int b, bool enableLogging = false) //параметры по умолчанию в конце списка всех параметров
+        {
+            int result = a + b;
+            if (enableLogging)
+            {
+                Console.WriteLine("Значение переменной a = " + a);
+                Console.WriteLine("Значение переменной b = " + b);
+                Console.WriteLine("Результат сложения = " + result);
+            }
+            return result;
+        }
+        /**
+         * Именованные параметры
+         */
+        public static void Task48()
+        {
+            int firstValue = 10;
+            int secondValue = 5;
+            int result = Sum(enableLogging: true, b: secondValue, a: firstValue);
+        }
+        /**
+         * Рекурсия
+         * 
+         * Методы и стек
+         * 
+         * Переполнения стека
+         */
+        public static void Task49()
+        {
+            Foo49(0);
+            Item item = InitItem();
+            Print49(item);
+            for (Item i = item; i != null; i = i.Child)
+            {
+                Console.WriteLine(i.Value);
+            }
+        }
+        /**
+         * Вспомогательный метод для Task49 
+         */
+        static void Foo49(int i)
+        {
+            Console.WriteLine(i);
+            if (i >= 3)
+            {
+                return;
+            }
+            i++;
+            Foo49(i);
+        }
+        /**
+         * Вспомогательный метод для Task49 
+         */
+        static Item InitItem()
+        {
+            return new Item()
+            {
+                Value = 5,
+                Child = new Item()
+                {
+                    Value = 10,
+                    Child = new Item()
+                    {
+                        Value = 2
+                    }
+                }
+            };
+        }
+        /**
+         * Вспомогательный метод для Task49 
+         */
+        static void Print49(Item item)
+        {
+            if (item != null)
+            {
+                Console.WriteLine(item.Value);
+                Print49(item.Child);
+            }
+        }
+        /**
+         * 
+         */
+        public static void Task50()
         {
 
         }
