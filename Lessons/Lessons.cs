@@ -1644,9 +1644,30 @@ namespace Lessons
             }
         }
         /**
-         * 
+         * Преобразование и приведение приметивных типов в C#
          */
         public static void Task50()
+        {
+            int a = 5;
+            float b = a;
+            double c = 5.2;
+            float d = (float)c;
+            float e = 2.5F;
+            int result = (int)(a + e);
+            Foo50(a);
+            Foo50((float)c);
+        }
+        /**
+         * Вспомогательный метод для Task49 
+         */
+        static void Foo50(float value)
+        {
+            Console.WriteLine(value);
+        }
+        /**
+         * 
+         */
+        public static void Task51()
         {
 
         }
