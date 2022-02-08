@@ -80,7 +80,11 @@ namespace Lessons
             //Homework.Homework15();
             //Homework.Homework16();
             //Homework.Homework17();
-            Lessons.Task50();
+            //Lessons.Task50();
+            Lessons.Task51();
+            Lessons.Task51_1();
+            Lessons.Task51_2();
+            Lessons.Task51_3();
 
             Console.ReadKey();
         }

@@ -1665,9 +1665,64 @@ namespace Lessons
             Console.WriteLine(value);
         }
         /**
-         * 
+         * "Ядерный Ганди" и арифметическое переполнение
          */
         public static void Task51()
+        {
+            byte aggression = 1;
+            byte democracyModifier = 2;
+            try
+            {
+                checked // проверка на переполнение
+                {
+                    aggression = (byte)(aggression - democracyModifier);    //сужающее преобразование данных
+                }
+                Console.WriteLine(aggression);
+            }
+            catch (OverflowException)
+            {
+
+                Console.WriteLine("Ошибка Переполнения!");
+            }
+        }
+        public static void Task51_1()
+        {
+            int a = int.MaxValue;
+            a = a + 1;  //переполнение через верхнюю границу
+            Console.WriteLine(a);
+
+            int b = int.MinValue;
+            b = b - 1;  //переполнение через нижнюю границу
+            Console.WriteLine(b);
+        }
+        public static void Task51_2()
+        {
+            double a = 1.0 / 0.0;
+            Console.WriteLine(double.IsInfinity(a));    // output: True
+            double b = 0.0 / 0.0;
+            Console.WriteLine(double.IsNaN(b)); // output: True
+            double c = double.MaxValue + double.MaxValue;
+            Console.WriteLine(double.IsInfinity(c));    // output: True
+        }
+        public static void Task51_3()
+        {
+            try
+            {
+                decimal a = decimal.MaxValue;
+                decimal b = decimal.MaxValue;
+                decimal c = unchecked(a + b);   //Для операндов типа decimal арифметическое переполнение всегда вызыва исключение
+            }
+            catch (OverflowException)
+            {
+
+                Console.WriteLine("Ошибка Переполнения!");
+            }
+
+        }
+        /**
+         * 
+         */
+        public static void Task52()
         {
 
         }
