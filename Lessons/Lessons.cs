@@ -1720,9 +1720,57 @@ namespace Lessons
 
         }
         /**
-         * 
+         * NULL-совместимые значимые типы (Nullable)
          */
         public static void Task52()
+        {
+            string str = null;
+            //int a = null;
+            DateTime? dateTime = null;
+        }
+        public static void Task52_1()
+        {
+            int? i = null;
+            Console.WriteLine(i == null); //True
+            Console.WriteLine(i.HasValue); //False
+            Console.WriteLine(i.GetValueOrDefault()); //0
+            Console.WriteLine(i.GetValueOrDefault(3)); //3
+            Console.WriteLine(i ?? 55); //55
+            //Console.WriteLine(i.Value); //InvalidOperationException
+            Console.WriteLine(i);
+        }
+        public static void Task52_2()
+        {
+            int? i = 2;
+            Console.WriteLine(i);
+            Console.WriteLine(i == null); //False
+            Console.WriteLine(i.HasValue); //True
+            Console.WriteLine(i.GetValueOrDefault()); //2
+            Console.WriteLine(i.GetValueOrDefault(3)); //2
+            Console.WriteLine(i ?? 55); //2
+            Console.WriteLine(i.Value); //2
+        }
+        public static void Task52_3()
+        {
+            Nullable<DateTime> dateTime = DateTime.Now;
+            DateTime? dateTime1 = null;
+            Console.WriteLine(dateTime);
+        }
+        public static void Task52_4()
+        {
+            int a = 5;
+            int? b = 22;
+            int? result = a + b;
+            Console.WriteLine(result);
+            Console.WriteLine(a == b);
+            Console.WriteLine(a > b);
+            Console.WriteLine(a < b);
+
+        }
+        /**
+         * 
+         */
+        public static void Task53()
         {
 
         }
