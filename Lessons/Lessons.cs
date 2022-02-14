@@ -1818,9 +1818,113 @@ namespace Lessons
             var t = Sum53(2, 3);
         }
         /**
-         * 
+         * enum (перечисления)
          */
         public static void Task54()
+        {
+            while (true)
+            {
+                ConsoleKey key = Console.ReadKey().Key;
+                int keyCode = (int)key;
+                Console.WriteLine($"\tEnum {key}\tKey Code {keyCode}");
+                if (key == ConsoleKey.Enter)
+                {
+                    Console.WriteLine("Вы нажали enter!");
+                }
+            }
+        }
+        /*
+         * enum для Task54_1() и Task54_4()
+         */
+        enum DayOfWeek : byte
+        {
+            Monday = 1,
+            Tuesday,
+            Wednesday,
+            Thursday,
+            Friday,
+            Saturday,
+            Sunday
+        }
+        public static void Task54_1()
+        {
+            DayOfWeek dayOfWeek = DayOfWeek.Monday;
+            Console.WriteLine(Enum.GetUnderlyingType(typeof(DayOfWeek)));
+            Console.WriteLine(dayOfWeek);
+            Console.WriteLine((int)dayOfWeek);
+            Console.WriteLine((DayOfWeek)3);
+            DayOfWeek nextDay = GetNextDay(dayOfWeek);
+            Console.WriteLine(nextDay);
+        }
+        /// <summary>
+        /// Получаем следующий день
+        /// </summary>
+        /// <param name="day"></param>
+        /// <returns></returns>
+        static DayOfWeek GetNextDay(DayOfWeek day)
+        {
+            if (day < DayOfWeek.Sunday)
+                return day + 1;
+            return DayOfWeek.Monday;
+        }
+        public static void Task54_4()
+        {
+            DayOfWeek dayOfWeek;
+            byte value = 5;
+            if (Enum.IsDefined(typeof(DayOfWeek), value))
+            {
+                dayOfWeek = (DayOfWeek)value; //приводим int к DayOfWeek
+            }
+            else
+            {
+                throw new Exception("Invalid DayOfWeek value.");
+            }
+            Console.WriteLine(dayOfWeek);
+        }
+        /*
+         * enum для Task54_2() и Task54_3()
+         */
+        enum Color
+        {
+            White,
+            Red,
+            Green,
+            Blue,
+            Orange
+        }
+        public static void Task54_2()
+        {
+            var values = Enum.GetValues(typeof(Color));
+            foreach (var item in values)
+            {
+                Console.WriteLine(item);
+            }
+        }
+        public static void Task54_3()
+        {
+            string str = Console.ReadLine();
+            Color color = (Color)Enum.Parse(typeof(Color), str, ignoreCase: true); //ignoreCase: true - игнорирует регистр ввода
+            Console.WriteLine(color);
+            switch (color)
+            {
+                case Color.White:
+                    break;
+                case Color.Red:
+                    break;
+                case Color.Green:
+                    break;
+                case Color.Blue:
+                    break;
+                case Color.Orange:
+                    break;
+                default:
+                    break;
+            }
+        }
+        /**
+* 
+*/
+        public static void Task55()
         {
 
         }
