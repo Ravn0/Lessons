@@ -1768,9 +1768,59 @@ namespace Lessons
 
         }
         /**
+         * Ключевое слово var
          * 
+         * неявно типизированные локальные переменные 
          */
         public static void Task53()
+        {
+            var t = 5;
+            var w = new Dictionary<int, string>();
+            var r = new List<byte>();
+            var e = new { Name = "Мартин", Age = 25 };
+            Console.WriteLine(t.GetType());
+            Console.WriteLine(w.GetType());
+            Console.WriteLine(r.GetType());
+            Console.WriteLine(e.GetType());
+        }
+        public static void Task53_2()
+        {
+            int[] numbers = { 1, 5, 344, 40, 1, 24, 6, 9, 11 };
+            var result = from i in numbers where i > 15 select i;
+            foreach (var item in result)
+            {
+                Console.Write($"{item}\t");
+            }
+            Console.WriteLine();
+            Console.WriteLine($"Тип данных result {result.GetType()}");
+        }
+        /* Привер того что неявный тип var не может быть глобальным
+        class MyClass
+        {
+            public var a = 5;
+        }
+        static var Foo53()
+        {
+
+        }
+        static void Bar(var a)
+        {
+
+        }
+        */
+        static int Sum53(int a, int b)
+        {
+            var result = a + b;
+            return result;
+        }
+        public static void Task53_1()
+        {
+            var t = Sum53(2, 3);
+        }
+        /**
+         * 
+         */
+        public static void Task54()
         {
 
         }

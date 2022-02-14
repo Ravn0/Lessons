@@ -90,9 +90,13 @@ namespace Lessons
             //Lessons.Task52_2();
             //Lessons.Task52_3();
             //Lessons.Task52_4();
-            //Lessons.Task53();
-            Sololearn.Task5();
+            Lessons.Task53();
+            Lessons.Task53_2();
+            Lessons.Task53_1();
 
+
+
+            Sololearn.Task5();
             Console.ReadKey();
         }
     }
