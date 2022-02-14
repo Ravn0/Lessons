@@ -1922,9 +1922,84 @@ namespace Lessons
             }
         }
         /**
-* 
-*/
+        * ООП
+        * Класс
+        * Объект класса (экземпляр)
+        */
         public static void Task55()
+        {
+            Point p = new Point();
+            p.x = 4;
+            p.y = 2;
+            p.color = Color.Orange;
+            Point p2 = new Point();
+            p2.x = 2;
+            p2.y = 6;
+            Console.WriteLine($"X: {p.x} | Y: {p.y} | Color: {p.color}");
+            Console.WriteLine($"X: {p2.x} | Y: {p2.y}");
+            Console.WriteLine(p.ToString());
+            Console.WriteLine(p.GetType());
+            Console.WriteLine(p.GetHashCode());
+            Console.WriteLine(p2.GetHashCode());
+            Console.WriteLine(p.Equals(p2));
+        }
+        public static void Task55_2()
+        {
+            var firstStudent = GetStudent();
+            Print55(firstStudent);
+        }
+        /**
+         * class Point для Task55()
+         */
+        class Point
+        {
+            public int x;
+            public int y;
+            public Color color;
+        }
+        /**
+         * class Student для Task55_2()
+         */
+        class Student
+        {
+            public Guid id;
+            public string firstName;
+            public string lastName;
+            public string midleName;
+            public int age;
+            public string group;
+        }
+        /**
+         * Вспомогательный метод для Task55_2()
+         */
+        static Student GetStudent()
+        {
+            Student student = new Student();
+            student.firstName = "Мартин";
+            student.midleName = "Игоревич";
+            student.lastName = "Дугин";
+            student.age = 19;
+            student.id = Guid.NewGuid();
+            student.group = "ЙЦУКЕН_1";
+            return student;
+        }
+        /**
+         * Вспомогательный метод для Task55_2()
+         */
+        static void Print55(Student student)
+        {
+            Console.WriteLine("Информация о студенте:");
+            Console.WriteLine($"Id: {student.id}");
+            Console.WriteLine($"Фамилия: {student.lastName}");
+            Console.WriteLine($"Имя: {student.firstName}");
+            Console.WriteLine($"Отчество: {student.midleName}");
+            Console.WriteLine($"Возраст: {student.age}");
+            Console.WriteLine($"Группа: {student.group}");
+        }
+        /**
+        * 
+        */
+        public static void Task56()
         {
 
         }

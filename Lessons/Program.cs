@@ -94,10 +94,12 @@ namespace Lessons
             //Lessons.Task53_2();
             //Lessons.Task53_1();
             //Lessons.Task54();
-            Lessons.Task54_1();
-            Lessons.Task54_4();
-            Lessons.Task54_2();
-            Lessons.Task54_3();
+            //Lessons.Task54_1();
+            //Lessons.Task54_4();
+            //Lessons.Task54_2();
+            //Lessons.Task54_3();
+            Lessons.Task55();
+            Lessons.Task55_2();
 
 
 
