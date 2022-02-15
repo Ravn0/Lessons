@@ -1958,7 +1958,7 @@ namespace Lessons
             public Color color;
         }
         /**
-         * class Student для Task55_2()
+         * class Student для Task55_2() и Task56()
          */
         class Student
         {
@@ -1968,6 +1968,20 @@ namespace Lessons
             public string midleName;
             public int age;
             public string group;
+            public void Print()
+            {
+                Console.WriteLine("Информация о студенте:");
+                Console.WriteLine($"Id: {id}");
+                Console.WriteLine($"Фамилия: {lastName}");
+                Console.WriteLine($"Имя: {firstName}");
+                Console.WriteLine($"Отчество: {midleName}");
+                Console.WriteLine($"Возраст: {age}");
+                Console.WriteLine($"Группа: {group}");
+            }
+            public string GetFullName()
+            {
+                return $"{lastName} {firstName} {midleName}";
+            }
         }
         /**
          * Вспомогательный метод для Task55_2()
@@ -1997,9 +2011,74 @@ namespace Lessons
             Console.WriteLine($"Группа: {student.group}");
         }
         /**
-        * 
+        * ООП
+        * методы объекта класса
         */
         public static void Task56()
+        {
+            var firstStudent = GetStudent();
+            firstStudent.Print();
+            string fullName = firstStudent.GetFullName();
+            Console.WriteLine(fullName);
+            Console.WriteLine();
+            Console.WriteLine();
+            var secondStudent = new Student();
+            secondStudent.firstName = "Noname";
+            secondStudent.Print();
+        }
+        public static void Task56_1()
+        {
+            Console.WriteLine("\t== Car 1 ==");
+            var car = new Car56();
+            car.PrintSpeed();
+            car.DriveForward();
+            car.PrintSpeed();
+            car.Stop();
+            car.PrintSpeed();
+            Console.WriteLine("\t== Car 2 ==");
+            var car2 = new Car56();
+            car2.PrintSpeed();
+            car2.DriveBackwaed();
+            car2.PrintSpeed();
+        }
+        /**
+         * class Car56 для Task56_1()
+         */
+        class Car56
+        {
+            private int speed = 0;
+            public void PrintSpeed()
+            {
+                if (speed == 0)
+                {
+                    Console.WriteLine("Стоим на месте...");
+                }
+                if (speed > 0)
+                {
+                    Console.WriteLine($"Едем вперёд со скоростью {speed} км\\ч");
+                }
+                if (speed < 0)
+                {
+                    Console.WriteLine($"Едем назад со скоростью {-speed} км\\ч");
+                }
+            }
+            public void DriveForward()
+            {
+                speed = 60;
+            }
+            public void Stop()
+            {
+                speed = 0;
+            }
+            public void DriveBackwaed()
+            {
+                speed = -5;
+            }
+        }
+        /**
+        * 
+        */
+        public static void Task57()
         {
 
         }
