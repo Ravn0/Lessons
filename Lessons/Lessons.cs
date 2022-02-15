@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using Task40and42WF;
+using System.Reflection;
 
 namespace Lessons
 {
@@ -2076,9 +2077,48 @@ namespace Lessons
             }
         }
         /**
-        * 
+        * Модификаторы доступа public и private, для членов класса
         */
         public static void Task57()
+        {
+            Point57 point = new Point57();
+            point.PrintY();
+            point.PrintPoint();
+            var typeInfo = typeof(Point57).
+                GetFields(BindingFlags.Instance |
+                BindingFlags.NonPublic |
+                BindingFlags.Public);
+            foreach (var item in typeInfo)
+            {
+                Console.WriteLine($"{item.Name}\t IsPrivate: {item.IsPrivate}\t IsPublic: {item.IsPublic}");
+            }
+        }
+        /**
+         * class Point57 для Task57()
+         */
+        class Point57
+        {
+            int z = 3;  //private
+            public int x = 1;
+            private int y = 44;
+            private void PrintX()
+            {
+                Console.WriteLine($"X: {x}");
+            }
+            public void PrintY()
+            {
+                Console.WriteLine($"Y: {y}");
+            }
+            public void PrintPoint()
+            {
+                PrintX();
+                PrintY();
+            }
+        }
+        /**
+        * 
+        */
+        public static void Task58()
         {
 
         }
