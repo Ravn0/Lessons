@@ -44,6 +44,121 @@ namespace Lessons
         public int Value { get; set; }
         public Item Child { get; set; }
     }
+    /*
+     * enum для Task54_1() и Task54_4()
+     */
+    enum DayOfWeek : byte
+    {
+        Monday = 1,
+        Tuesday,
+        Wednesday,
+        Thursday,
+        Friday,
+        Saturday,
+        Sunday
+    }
+    /*
+     * enum для Task54_2() и Task54_3()
+     */
+    enum Color
+    {
+        White,
+        Red,
+        Green,
+        Blue,
+        Orange
+    }
+    /**
+     * class Point для Task55()
+     */
+    class Point
+    {
+        public int x;
+        public int y;
+        public Color color;
+    }
+    /**
+     * class Student для Task55_2() и Task56()
+     */
+    class Student
+    {
+        public Guid id;
+        public string firstName;
+        public string lastName;
+        public string midleName;
+        public int age;
+        public string group;
+        public void Print()
+        {
+            Console.WriteLine("Информация о студенте:");
+            Console.WriteLine($"Id: {id}");
+            Console.WriteLine($"Фамилия: {lastName}");
+            Console.WriteLine($"Имя: {firstName}");
+            Console.WriteLine($"Отчество: {midleName}");
+            Console.WriteLine($"Возраст: {age}");
+            Console.WriteLine($"Группа: {group}");
+        }
+        public string GetFullName()
+        {
+            return $"{lastName} {firstName} {midleName}";
+        }
+    }
+    /**
+     * class Car56 для Task56_1()
+     */
+    class Car56
+    {
+        private int speed = 0;
+        public void PrintSpeed()
+        {
+            if (speed == 0)
+            {
+                Console.WriteLine("Стоим на месте...");
+            }
+            if (speed > 0)
+            {
+                Console.WriteLine($"Едем вперёд со скоростью {speed} км\\ч");
+            }
+            if (speed < 0)
+            {
+                Console.WriteLine($"Едем назад со скоростью {-speed} км\\ч");
+            }
+        }
+        public void DriveForward()
+        {
+            speed = 60;
+        }
+        public void Stop()
+        {
+            speed = 0;
+        }
+        public void DriveBackwaed()
+        {
+            speed = -5;
+        }
+    }
+    /**
+    * class Point57 для Task57()
+    */
+    class Point57
+    {
+        int z = 3;  //private
+        public int x = 1;
+        private int y = 44;
+        private void PrintX()
+        {
+            Console.WriteLine($"X: {x}");
+        }
+        public void PrintY()
+        {
+            Console.WriteLine($"Y: {y}");
+        }
+        public void PrintPoint()
+        {
+            PrintX();
+            PrintY();
+        }
+    }
     /// <summary>
     /// C# УРОКИ | C# ОТ НОВИЧКА К ПРОФЕССИОНАЛУ
     /// By #SimpleCode (https://www.youtube.com/c/SimpleCodeIT/featured)
@@ -1834,19 +1949,6 @@ namespace Lessons
                 }
             }
         }
-        /*
-         * enum для Task54_1() и Task54_4()
-         */
-        enum DayOfWeek : byte
-        {
-            Monday = 1,
-            Tuesday,
-            Wednesday,
-            Thursday,
-            Friday,
-            Saturday,
-            Sunday
-        }
         public static void Task54_1()
         {
             DayOfWeek dayOfWeek = DayOfWeek.Monday;
@@ -1881,17 +1983,6 @@ namespace Lessons
                 throw new Exception("Invalid DayOfWeek value.");
             }
             Console.WriteLine(dayOfWeek);
-        }
-        /*
-         * enum для Task54_2() и Task54_3()
-         */
-        enum Color
-        {
-            White,
-            Red,
-            Green,
-            Blue,
-            Orange
         }
         public static void Task54_2()
         {
@@ -1948,41 +2039,6 @@ namespace Lessons
         {
             var firstStudent = GetStudent();
             Print55(firstStudent);
-        }
-        /**
-         * class Point для Task55()
-         */
-        class Point
-        {
-            public int x;
-            public int y;
-            public Color color;
-        }
-        /**
-         * class Student для Task55_2() и Task56()
-         */
-        class Student
-        {
-            public Guid id;
-            public string firstName;
-            public string lastName;
-            public string midleName;
-            public int age;
-            public string group;
-            public void Print()
-            {
-                Console.WriteLine("Информация о студенте:");
-                Console.WriteLine($"Id: {id}");
-                Console.WriteLine($"Фамилия: {lastName}");
-                Console.WriteLine($"Имя: {firstName}");
-                Console.WriteLine($"Отчество: {midleName}");
-                Console.WriteLine($"Возраст: {age}");
-                Console.WriteLine($"Группа: {group}");
-            }
-            public string GetFullName()
-            {
-                return $"{lastName} {firstName} {midleName}";
-            }
         }
         /**
          * Вспомогательный метод для Task55_2()
@@ -2043,40 +2099,6 @@ namespace Lessons
             car2.PrintSpeed();
         }
         /**
-         * class Car56 для Task56_1()
-         */
-        class Car56
-        {
-            private int speed = 0;
-            public void PrintSpeed()
-            {
-                if (speed == 0)
-                {
-                    Console.WriteLine("Стоим на месте...");
-                }
-                if (speed > 0)
-                {
-                    Console.WriteLine($"Едем вперёд со скоростью {speed} км\\ч");
-                }
-                if (speed < 0)
-                {
-                    Console.WriteLine($"Едем назад со скоростью {-speed} км\\ч");
-                }
-            }
-            public void DriveForward()
-            {
-                speed = 60;
-            }
-            public void Stop()
-            {
-                speed = 0;
-            }
-            public void DriveBackwaed()
-            {
-                speed = -5;
-            }
-        }
-        /**
         * Модификаторы доступа public и private, для членов класса
         */
         public static void Task57()
@@ -2091,28 +2113,6 @@ namespace Lessons
             foreach (var item in typeInfo)
             {
                 Console.WriteLine($"{item.Name}\t IsPrivate: {item.IsPrivate}\t IsPublic: {item.IsPublic}");
-            }
-        }
-        /**
-         * class Point57 для Task57()
-         */
-        class Point57
-        {
-            int z = 3;  //private
-            public int x = 1;
-            private int y = 44;
-            private void PrintX()
-            {
-                Console.WriteLine($"X: {x}");
-            }
-            public void PrintY()
-            {
-                Console.WriteLine($"Y: {y}");
-            }
-            public void PrintPoint()
-            {
-                PrintX();
-                PrintY();
             }
         }
         /**

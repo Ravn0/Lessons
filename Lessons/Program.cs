@@ -102,11 +102,11 @@ namespace Lessons
             //Lessons.Task55_2();
             //Lessons.Task56();
             //Lessons.Task56_1();
-            Lessons.Task57();
+            //Lessons.Task57();
 
 
 
-            Sololearn.Task5();
+            Sololearn.Task7();
             Console.ReadKey();
         }
     }

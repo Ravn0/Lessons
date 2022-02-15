@@ -46,5 +46,17 @@ namespace Lessons
                 Console.WriteLine(":(");
             }
         }
+        public static void Task6()
+        {
+            int x = 12;
+            x = x << 2;
+            Console.WriteLine(x);
+        }
+        public static void Task7()
+        {
+            int[] arr = { 10, 15, 16 };
+            var x = arr.FirstOrDefault(z => z.Equals(14));
+            Console.WriteLine(x + 15);
+        }
     }
 }
