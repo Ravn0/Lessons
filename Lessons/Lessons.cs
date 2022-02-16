@@ -160,26 +160,52 @@ namespace Lessons
         }
     }
     /**
-    * class Gun для Task58()
+    * class Gun для Task58() и Task59()
     */
     class Gun
     {
-        private bool isLoaded;
+        private bool _isLoaded;
+        public Gun()
+        {
+
+        }
+        public Gun(bool isLoaded)
+        {
+            _isLoaded = isLoaded;
+        }
         private void Reload()
         {
             Console.WriteLine("Заряжаю...");
-            isLoaded = true;
+            _isLoaded = true;
             Console.WriteLine("ЗАряжено!");
         }
         public void Shoot()
         {
-            if (!isLoaded)
+            if (!_isLoaded)
             {
                 Console.WriteLine("Орудие не заряжено!");
                 Reload();
             }
             Console.WriteLine("Пыщ-пыщ\n");
-            isLoaded = false;
+            _isLoaded = false;
+        }
+    }
+    /**
+* class Point57 для Task57()
+*/
+    class Point59
+    {
+
+        private int _x;
+        private int _y;
+        public Point59(int x, int y)
+        {
+            _x = x;
+            _y = y;
+        }
+        public void Print()
+        {
+            Console.WriteLine($"X: {_x}\tY: {_y}");
         }
     }
     /// <summary>
@@ -2147,9 +2173,24 @@ namespace Lessons
             gun.Shoot();
         }
         /**
+        * Конструктор класса
         * 
+        * конструктор по умолчанию
         */
         public static void Task59()
+        {
+            Gun gun = new Gun(isLoaded: true);
+            gun.Shoot();
+        }
+        public static void Task59_2()
+        {
+            Point59 point = new Point59(5, 3);
+            point.Print();
+        }
+        /**
+        * 
+        */
+        public static void Task60()
         {
 
         }
