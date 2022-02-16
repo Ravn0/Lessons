@@ -249,6 +249,42 @@ namespace Lessons
             Console.WriteLine($"Имя: {_firstName}\nФамилия: {_lastName}\nОтчество: {_midleName}\nДата рождения: {_birthday.ToString("dd.MM.yyyy")} г");
         }
     }
+
+    /**
+     * class Student61 для Task61
+     */
+    class Student61
+    {
+        private string firstName;
+        private string lastName;
+        private string midleName;
+        private DateTime birthday;
+        public Student61(string lastName, DateTime birthday)
+        {
+            this.lastName = lastName;
+            this.birthday = birthday;
+        }
+        public Student61(string lastName, string firstName, string midleName, DateTime birthday) : this(lastName, birthday)
+        {
+            this.firstName = firstName;
+            this.midleName = midleName;
+        }
+        public Student61(Student61 student)
+        {
+            firstName = student.firstName;
+            midleName = student.midleName;
+            lastName = student.lastName;
+            birthday = student.birthday;
+        }
+        public void SetLastName(string lastName)
+        {
+            this.lastName = lastName;
+        }
+        public void Print()
+        {
+            Console.WriteLine($"Имя: {firstName}\nФамилия: {lastName}\nОтчество: {midleName}\nДата рождения: {birthday.ToString("dd.MM.yyyy")} г");
+        }
+    }
     /// <summary>
     /// C# УРОКИ | C# ОТ НОВИЧКА К ПРОФЕССИОНАЛУ
     /// By #SimpleCode (https://www.youtube.com/c/SimpleCodeIT/featured)
@@ -2247,9 +2283,21 @@ namespace Lessons
 
         }
         /**
-        * 
+        * this
         */
         public static void Task61()
+        {
+            Student61 student1 = new Student61("Йцукенов", new DateTime(2000, 10, 5));
+            Student61 student2 = new Student61("Qwerty", new DateTime(2000, 10, 5));
+            Student61 student3 = new Student61("Йцукенов", "Йцукен", "Йцукенович", new DateTime(2000, 10, 5));
+            student1.Print();
+            student2.Print();
+            student3.Print();
+        }
+        /**
+        * 
+        */
+        public static void Task62()
         {
 
         }
