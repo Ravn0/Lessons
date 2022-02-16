@@ -159,6 +159,29 @@ namespace Lessons
             PrintY();
         }
     }
+    /**
+    * class Gun для Task58()
+    */
+    class Gun
+    {
+        private bool isLoaded;
+        private void Reload()
+        {
+            Console.WriteLine("Заряжаю...");
+            isLoaded = true;
+            Console.WriteLine("ЗАряжено!");
+        }
+        public void Shoot()
+        {
+            if (!isLoaded)
+            {
+                Console.WriteLine("Орудие не заряжено!");
+                Reload();
+            }
+            Console.WriteLine("Пыщ-пыщ\n");
+            isLoaded = false;
+        }
+    }
     /// <summary>
     /// C# УРОКИ | C# ОТ НОВИЧКА К ПРОФЕССИОНАЛУ
     /// By #SimpleCode (https://www.youtube.com/c/SimpleCodeIT/featured)
@@ -2116,9 +2139,17 @@ namespace Lessons
             }
         }
         /**
-        * 
+        * Инкапсуляция
         */
         public static void Task58()
+        {
+            Gun gun = new Gun();
+            gun.Shoot();
+        }
+        /**
+        * 
+        */
+        public static void Task59()
         {
 
         }

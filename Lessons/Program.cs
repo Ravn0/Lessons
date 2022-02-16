@@ -103,10 +103,12 @@ namespace Lessons
             //Lessons.Task56();
             //Lessons.Task56_1();
             //Lessons.Task57();
+            Lessons.Task58();
 
 
 
-            Sololearn.Task7();
+
+            //Sololearn.Task7();
             Console.ReadKey();
         }
     }
