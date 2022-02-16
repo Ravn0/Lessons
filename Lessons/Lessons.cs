@@ -191,8 +191,8 @@ namespace Lessons
         }
     }
     /**
-* class Point57 для Task57()
-*/
+    * class Point59 для Task59_2() и Task60()
+    */
     class Point59
     {
 
@@ -203,9 +203,50 @@ namespace Lessons
             _x = x;
             _y = y;
         }
+        public Point59()
+        {
+            _x = _y = 1;
+        }
         public void Print()
         {
             Console.WriteLine($"X: {_x}\tY: {_y}");
+        }
+    }
+    /**
+     * class Student60 для Task60
+     */
+    class Student60
+    {
+        private string _firstName;
+        private string _lastName;
+        private string _midleName;
+        private DateTime _birthday;
+        public Student60(string lastName, DateTime birthday)
+        {
+            _lastName = lastName;
+            _birthday = birthday;
+        }
+        public Student60(string lastName, string firstName, string midleName, DateTime birthday)
+        {
+            _firstName = firstName;
+            _midleName = midleName;
+            _lastName = lastName;
+            _birthday = birthday;
+        }
+        public Student60(Student60 student)
+        {
+            _firstName = student._firstName;
+            _midleName = student._midleName;
+            _lastName = student._lastName;
+            _birthday = student._birthday;
+        }
+        public void SetLastName(string lastName)
+        {
+            _lastName = lastName;
+        }
+        public void Print()
+        {
+            Console.WriteLine($"Имя: {_firstName}\nФамилия: {_lastName}\nОтчество: {_midleName}\nДата рождения: {_birthday.ToString("dd.MM.yyyy")} г");
         }
     }
     /// <summary>
@@ -2188,9 +2229,27 @@ namespace Lessons
             point.Print();
         }
         /**
-        * 
+        * Перегрузка конструкторов класса
         */
         public static void Task60()
+        {
+            Point59 point = new Point59();
+            point.Print();
+        }
+        public static void Task60_2()
+        {
+            Student60 student1 = new Student60("Йцукенов", "Йцукен", "Йцукенович", new DateTime(2000, 10, 5));
+            Student60 student2 = new Student60(student1);
+            student1.SetLastName("########");
+            student1.Print();
+            Console.WriteLine();
+            student2.Print();
+
+        }
+        /**
+        * 
+        */
+        public static void Task61()
         {
 
         }
