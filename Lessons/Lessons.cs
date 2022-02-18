@@ -195,7 +195,6 @@ namespace Lessons
     */
     class Point59
     {
-
         private int _x;
         private int _y;
         public Point59(int x, int y)
@@ -284,6 +283,56 @@ namespace Lessons
         {
             Console.WriteLine($"Имя: {firstName}\nФамилия: {lastName}\nОтчество: {midleName}\nДата рождения: {birthday.ToString("dd.MM.yyyy")} г");
         }
+    }
+    /**
+    * class Point62 для Task62()
+    */
+    class Point62
+    {
+        private int x;
+        public void SetX(int x)
+        {
+            if (x < 1)
+            {
+                this.x = 1;
+                return;
+            }
+            if (x > 5)
+            {
+                this.x = 5;
+                return;
+            }
+            this.x = x;
+        }
+        public int GetX()
+        {
+            return x;
+        }
+        private int y;
+
+        public int Y
+        {
+            get
+            {
+                return y;
+            }
+            set
+            {
+                if (value < 1)
+                {
+                    y = 1;
+                    return;
+                }
+                if (value > 5)
+                {
+                    y = 5;
+                    return;
+                }
+                y = value;
+            }
+        }
+        public int Z { get; set; }
+
     }
     /// <summary>
     /// C# УРОКИ | C# ОТ НОВИЧКА К ПРОФЕССИОНАЛУ
@@ -2295,9 +2344,24 @@ namespace Lessons
             student3.Print();
         }
         /**
+        * Свойства (Properties)
         * 
+        * Автоматические свойства
         */
         public static void Task62()
+        {
+            Point62 point = new Point62();
+            point.SetX(10);
+            int x = point.GetX();
+            point.Y = 10;
+            int y = point.Y;
+            point.Z = 1;
+            int z = point.Z;
+        }
+        /**
+        * 
+        */
+        public static void Task63()
         {
 
         }
