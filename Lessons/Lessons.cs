@@ -334,6 +334,21 @@ namespace Lessons
         public int Z { get; set; }
 
     }
+    /**
+    * class MyClass63 для Task63()
+    */
+    class MyClass63
+    {
+        private static int b;
+        public void SetB(int b)
+        {
+            MyClass63.b = b;
+        }
+        public void PrintB()
+        {
+            Console.WriteLine(b);
+        }
+    }
     /// <summary>
     /// C# УРОКИ | C# ОТ НОВИЧКА К ПРОФЕССИОНАЛУ
     /// By #SimpleCode (https://www.youtube.com/c/SimpleCodeIT/featured)
@@ -2359,9 +2374,21 @@ namespace Lessons
             int z = point.Z;
         }
         /**
+        * Ключевое слово static
         * 
+        * Статические поля класса
         */
         public static void Task63()
+        {
+            MyClass63 myClass1 = new MyClass63();
+            myClass1.SetB(9);
+            MyClass63 myClass2 = new MyClass63();
+            myClass2.PrintB();
+        }
+        /**
+        * 
+        */
+        public static void Task64()
         {
 
         }
