@@ -423,6 +423,20 @@ namespace Lessons
             return "local DB";
         }
     }
+    /**
+    * class ConfigurationMenager для Task65_2()
+    */
+    static class MyClass66
+    {
+        public static void Foo()
+        {
+            Console.WriteLine("Foo");
+        }
+        public static void Bar()
+        {
+            Console.WriteLine("Bar");
+        }
+    }
     /// <summary>
     /// C# УРОКИ | C# ОТ НОВИЧКА К ПРОФЕССИОНАЛУ
     /// By #SimpleCode (https://www.youtube.com/c/SimpleCodeIT/featured)
@@ -2494,9 +2508,19 @@ namespace Lessons
             dbRepository.GetData();
         }
         /**
+        * Ключевое слово static
         * 
+        * Статический класс
         */
         public static void Task66()
+        {
+            MyClass66.Foo();
+            MyClass66.Bar();
+        }
+        /**
+        * 
+        */
+        public static void Task67()
         {
 
         }
