@@ -349,6 +349,35 @@ namespace Lessons
             Console.WriteLine(b);
         }
     }
+    /**
+    * class MyClass64 для Task64()
+    */
+    class MyClass64
+    {
+        public MyClass64()
+        {
+            Counter++;
+        }
+        private static int counter;
+
+        public static int Counter
+        {
+            get { return counter; }
+            private set { counter = value; }
+        }
+        public int ObjectsCount
+        {
+            get { return counter; }
+        }
+        public static int GetCounter()
+        {
+            return counter;
+        }
+        public int GetObjectsCount()
+        {
+            return counter;
+        }
+    }
     /// <summary>
     /// C# УРОКИ | C# ОТ НОВИЧКА К ПРОФЕССИОНАЛУ
     /// By #SimpleCode (https://www.youtube.com/c/SimpleCodeIT/featured)
@@ -2386,9 +2415,26 @@ namespace Lessons
             myClass2.PrintB();
         }
         /**
+        * Ключевое слово static
         * 
+        * Статические методы класса
+        * 
+        * Статические свойства класса
         */
         public static void Task64()
+        {
+            MyClass64 myClass1 = new MyClass64();
+            Console.WriteLine(myClass1.ObjectsCount);
+            MyClass64 myClass2 = new MyClass64();
+            Console.WriteLine(myClass1.GetObjectsCount());
+            MyClass64 myClass3 = new MyClass64();
+            Console.WriteLine(MyClass64.Counter);
+            Console.WriteLine(MyClass64.GetCounter());
+        }
+        /**
+        * 
+        */
+        public static void Task65()
         {
 
         }
