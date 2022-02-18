@@ -111,7 +111,9 @@ namespace Lessons
             //Lessons.Task61();
             //Lessons.Task62();
             //Lessons.Task63();
-            Lessons.Task64();
+            //Lessons.Task64();
+            Lessons.Task65();
+            Lessons.Task65_2();
 
 
 

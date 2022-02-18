@@ -378,6 +378,51 @@ namespace Lessons
             return counter;
         }
     }
+    /**
+    * class MyClass65 для Task65()
+    */
+    class MyClass65
+    {
+        public MyClass65()
+        {
+            Console.WriteLine("Конструктор");
+        }
+        static MyClass65()
+        {
+            Console.WriteLine("Статический конструктор");
+        }
+        public static void Foo()
+        {
+            Console.WriteLine("Foo");
+        }
+    }
+
+    /**
+    * class DbRepository для Task65_2()
+    */
+    class DbRepository
+    {
+        private static string connectionStritg;
+        static DbRepository()
+        {
+            ConfigurationMenager configurationMenager = new ConfigurationMenager();
+            connectionStritg = configurationMenager.GetConnectionStrinf();
+        }
+        public void GetData()
+        {
+            Console.WriteLine("Использую: " + connectionStritg);
+        }
+    }
+    /**
+    * class ConfigurationMenager для Task65_2()
+    */
+    class ConfigurationMenager
+    {
+        public string GetConnectionStrinf()
+        {
+            return "local DB";
+        }
+    }
     /// <summary>
     /// C# УРОКИ | C# ОТ НОВИЧКА К ПРОФЕССИОНАЛУ
     /// By #SimpleCode (https://www.youtube.com/c/SimpleCodeIT/featured)
@@ -2432,9 +2477,26 @@ namespace Lessons
             Console.WriteLine(MyClass64.GetCounter());
         }
         /**
+        * Ключевое слово static
         * 
+        * Статический конструктор
         */
         public static void Task65()
+        {
+            MyClass65.Foo();
+            new MyClass65();
+            new MyClass65();
+            new MyClass65();
+        }
+        public static void Task65_2()
+        {
+            DbRepository dbRepository = new DbRepository();
+            dbRepository.GetData();
+        }
+        /**
+        * 
+        */
+        public static void Task66()
         {
 
         }
