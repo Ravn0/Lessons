@@ -503,7 +503,6 @@ namespace Lessons
             Console.WriteLine($"{DateTime.Now}\t|WARM|\t{message}");
         }
     }
-
     /**
     * class Car69 для Task69_2()
     */
@@ -547,6 +546,50 @@ namespace Lessons
             }
         }
     }
+    /**
+    * class Cat для Task70()
+    */
+    class Cat
+    {
+        public int Age { get; set; }
+        public string Name { get; set; }
+        public Cat()
+        {
+
+        }
+        public Cat(string name)
+        {
+            Name = name;
+        }
+    }
+    /**
+    * class Person70 для Task70_2()
+    */
+    partial class Person70
+    {
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public Address Address { get; set; }
+        public Person70()
+        {
+
+        }
+        public Person70(string firstName, string lastName)
+        {
+            FirstName = firstName;
+            LastName = lastName;
+        }
+    }
+    /**
+    * class Address для Task70_2()
+    */
+    public class Address
+    {
+        public string Country { get; set; }
+        public string Region { get; set; }
+        public string City { get; set; }
+    }
+
     /// <summary>
     /// C# УРОКИ | C# ОТ НОВИЧКА К ПРОФЕССИОНАЛУ
     /// By #SimpleCode (https://www.youtube.com/c/SimpleCodeIT/featured)
@@ -2672,9 +2715,71 @@ namespace Lessons
             car.Drive();
         }
         /**
-        * 
+        * синтаксис инициализвции объектов
         */
         public static void Task70()
+        {
+            Cat cat1 = new Cat();
+            cat1.Age = 3;
+            cat1.Name = "Барсик";
+
+            Cat cat2 = new Cat
+            {
+                Age = 3,
+                Name = "Барсик"
+            };
+
+            Cat cat3 = new Cat("Барсик");
+            cat3.Age = 3;
+
+            Cat cat4 = new Cat("Барсик")
+            {
+                Age = 3,
+            };
+
+            Cat cat5 = new Cat("Барсик") // будет Васька
+            {
+                Age = 3,
+                Name = "Васька"
+            };
+        }
+        public static void Task70_2()
+        {
+            Person70 person1 = new Person70();
+            person1.FirstName = "Ранд";
+            person1.LastName = "ал'Тор";
+            Address address = new Address();
+            address.Country = "Андор";
+            address.Region = "Двуречье";
+            address.City = "Эмондов Луг";
+            person1.Address = address;
+
+            Person70 person2 = new Person70
+            {
+                FirstName = "Ранд",
+                LastName = "ал'Тор",
+                Address = new Address
+                {
+                    Country = "Андор",
+                    Region = "Двуречье",
+                    City = "Эмондов Луг"
+                }
+            };
+
+            Person70 person3 = new Person70("Ранд", "ал'Тор")
+            {
+                Address = new Address
+                {
+                    Country = "Андор",
+                    Region = "Двуречье",
+                    City = "Эмондов Луг"
+                }
+            };
+        }
+        /**
+        * 
+        */
+        public static void Task71()
         {
 
         }
