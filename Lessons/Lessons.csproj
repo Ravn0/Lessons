@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{3C0A0CCD-365D-4146-9DBC-BBAE5BD55820}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <LangVersion>8.0</LangVersion>
+    <LangVersion>9.0</LangVersion>
     <RootNamespace>Lessons</RootNamespace>
     <AssemblyName>Lessons</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
@@ -47,6 +47,7 @@
     <Compile Include="Homework.cs" />
     <Compile Include="Lessons.cs" />
     <Compile Include="MyExtension.cs" />
+    <Compile Include="Person68Methods.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sololearn.cs" />

@@ -446,6 +446,21 @@ namespace Lessons
         public string FirstName { get; set; }
         public string LastName { get; set; }
     }
+
+    /**
+    * class Person68 для Task68()
+    */
+    partial class Person68
+    {
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public Person68(string firstName, string lastName)
+        {
+            FirstName = firstName;
+            LastName = lastName;
+        }
+        public partial string GetFullName();
+    }
     /// <summary>
     /// C# УРОКИ | C# ОТ НОВИЧКА К ПРОФЕССИОНАЛУ
     /// By #SimpleCode (https://www.youtube.com/c/SimpleCodeIT/featured)
@@ -2543,9 +2558,21 @@ namespace Lessons
             Console.WriteLine(fullName);
         }
         /**
+        * Частичные типы
         * 
+        * partial классы
+        * 
+        * partial методы
         */
         public static void Task68()
+        {
+            Person68 person = new Person68("Эгвейн", "ал'Вир");
+            person.PrintFullName();
+        }
+        /**
+        * 
+        */
+        public static void Task69()
         {
 
         }
