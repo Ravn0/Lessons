@@ -589,7 +589,28 @@ namespace Lessons
         public string Region { get; set; }
         public string City { get; set; }
     }
-
+    /**
+    * class Person71 для Task71()
+    */
+    partial class Person71
+    {
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public void PrintName()
+        {
+            Console.WriteLine($"Меня зовут {FirstName}");
+        }
+    }
+    /**
+    * class Person71 для Task71()
+    */
+    class Student71 : Person71
+    {
+        public void Learn()
+        {
+            Console.WriteLine("Я учусь!");
+        }
+    }
     /// <summary>
     /// C# УРОКИ | C# ОТ НОВИЧКА К ПРОФЕССИОНАЛУ
     /// By #SimpleCode (https://www.youtube.com/c/SimpleCodeIT/featured)
@@ -2777,9 +2798,33 @@ namespace Lessons
             };
         }
         /**
-        * 
+        * Наследование в ООП
         */
         public static void Task71()
+        {
+            Person71 person = new Person71 { FirstName = "Кей", LastName = "Альтос" };
+            person.PrintName();
+
+            Student71 student = new Student71 { FirstName = "Кей", LastName = "Альтос" };
+            student.PrintName();
+            student.Learn();
+            PrintFullName(student);
+        }
+        public static void Task71_2()
+        {
+            //Проект Lesson71
+        }
+        /**
+         * Вспомогательный метод для Task71()
+         */
+        static void PrintFullName(Person71 person)
+        {
+            Console.WriteLine($"Фамилия: {person.LastName}\t Имя: {person.FirstName}");
+        }
+        /**
+        * 
+        */
+        public static void Task72()
         {
 
         }
