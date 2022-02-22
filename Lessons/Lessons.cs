@@ -446,7 +446,6 @@ namespace Lessons
         public string FirstName { get; set; }
         public string LastName { get; set; }
     }
-
     /**
     * class Person68 для Task68()
     */
@@ -460,6 +459,93 @@ namespace Lessons
             LastName = lastName;
         }
         public partial string GetFullName();
+    }
+    /**
+    * class MyClass69 для Task69()
+    */
+    class MyClass69
+    {
+        public const double PI = 3.14;
+        public const string MY_ERROR = "some error";
+        public readonly int _a;
+        public static readonly int _b;
+        static MyClass69()
+        {
+            _b = 3;
+        }
+        public MyClass69(int a)
+        {
+            _a = a;
+        }
+        public void Foo()
+        {
+            Console.WriteLine(PI);
+            Console.WriteLine(MY_ERROR);
+            Console.WriteLine(_a);
+            Console.WriteLine(_b);
+        }
+    }
+    /**
+    * class MyLogger для Task69_2()
+    */
+    class MyLogger
+    {
+        public void Info(string message)
+        {
+            Console.WriteLine($"{DateTime.Now}\t|INFO|\t{message}");
+        }
+        public void Error(string message)
+        {
+            Console.WriteLine($"{DateTime.Now}\t|ERROR|\t{message}");
+        }
+        public void Warm(string message)
+        {
+            Console.WriteLine($"{DateTime.Now}\t|WARM|\t{message}");
+        }
+    }
+
+    /**
+    * class Car69 для Task69_2()
+    */
+    class Car69
+    {
+        private const string ENGINE_IS_STARTED_MESSAGE = "Двигатель запущен!";
+        private const string ATTEMPT_TO_START_ENGINE_MESSAGE = "Завожу двигатель!";
+        private const string ENGINE_HAS_ALREADY_STARTED_MESSAGE = "Лапоть, двигатель уже запущен!";
+        private const string ATTEMPT_TO_DRIVE_MESSAGE = "Тапку в пол!";
+        private const string DRIVE_MESSAGE = "Пoeхали!";
+        private const string DRIVE_ERROR_MESSAGE = "Лапоть, сначала заведи двигатель!";
+        private readonly MyLogger _myLogger;
+        private bool isEngineStarted;
+        public Car69(MyLogger myLogger)
+        {
+            _myLogger = myLogger;
+        }
+        public void StartEngine()
+        {
+            _myLogger.Info(ATTEMPT_TO_START_ENGINE_MESSAGE);
+            if (isEngineStarted)
+            {
+                _myLogger.Warm(ENGINE_HAS_ALREADY_STARTED_MESSAGE);
+            }
+            else
+            {
+                isEngineStarted = true;
+                _myLogger.Info(ENGINE_IS_STARTED_MESSAGE);
+            }
+        }
+        public void Drive()
+        {
+            _myLogger.Info(ATTEMPT_TO_DRIVE_MESSAGE);
+            if (isEngineStarted)
+            {
+                _myLogger.Warm(DRIVE_MESSAGE);
+            }
+            else
+            {
+                _myLogger.Info(DRIVE_ERROR_MESSAGE);
+            }
+        }
     }
     /// <summary>
     /// C# УРОКИ | C# ОТ НОВИЧКА К ПРОФЕССИОНАЛУ
@@ -2570,9 +2656,25 @@ namespace Lessons
             person.PrintFullName();
         }
         /**
-        * 
+        * const и readonly
         */
         public static void Task69()
+        {
+            MyClass69 myClass = new MyClass69(4);
+            myClass.Foo();
+        }
+        public static void Task69_2()
+        {
+            Car69 car = new Car69(new MyLogger());
+            car.Drive();
+            car.StartEngine();
+            car.StartEngine();
+            car.Drive();
+        }
+        /**
+        * 
+        */
+        public static void Task70()
         {
 
         }
