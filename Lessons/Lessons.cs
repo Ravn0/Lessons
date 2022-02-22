@@ -7,6 +7,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Task40and42WF;
 using System.Reflection;
+using Lessons_MyExtension;
 
 namespace Lessons
 {
@@ -47,7 +48,7 @@ namespace Lessons
     /*
      * enum для Task54_1() и Task54_4()
      */
-    enum DayOfWeek : byte
+    enum DayOfWeek54 : byte
     {
         Monday = 1,
         Tuesday,
@@ -436,6 +437,14 @@ namespace Lessons
         {
             Console.WriteLine("Bar");
         }
+    }
+    /**
+    * class Student67 для Task67_2()
+    */
+    sealed class Student67
+    {
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
     }
     /// <summary>
     /// C# УРОКИ | C# ОТ НОВИЧКА К ПРОФЕССИОНАЛУ
@@ -2229,12 +2238,12 @@ namespace Lessons
         }
         public static void Task54_1()
         {
-            DayOfWeek dayOfWeek = DayOfWeek.Monday;
-            Console.WriteLine(Enum.GetUnderlyingType(typeof(DayOfWeek)));
+            DayOfWeek54 dayOfWeek = DayOfWeek54.Monday;
+            Console.WriteLine(Enum.GetUnderlyingType(typeof(DayOfWeek54)));
             Console.WriteLine(dayOfWeek);
             Console.WriteLine((int)dayOfWeek);
-            Console.WriteLine((DayOfWeek)3);
-            DayOfWeek nextDay = GetNextDay(dayOfWeek);
+            Console.WriteLine((DayOfWeek54)3);
+            DayOfWeek54 nextDay = GetNextDay(dayOfWeek);
             Console.WriteLine(nextDay);
         }
         /// <summary>
@@ -2242,19 +2251,19 @@ namespace Lessons
         /// </summary>
         /// <param name="day"></param>
         /// <returns></returns>
-        static DayOfWeek GetNextDay(DayOfWeek day)
+        static DayOfWeek54 GetNextDay(DayOfWeek54 day)
         {
-            if (day < DayOfWeek.Sunday)
+            if (day < DayOfWeek54.Sunday)
                 return day + 1;
-            return DayOfWeek.Monday;
+            return DayOfWeek54.Monday;
         }
         public static void Task54_4()
         {
-            DayOfWeek dayOfWeek;
+            DayOfWeek54 dayOfWeek;
             byte value = 5;
-            if (Enum.IsDefined(typeof(DayOfWeek), value))
+            if (Enum.IsDefined(typeof(DayOfWeek54), value))
             {
-                dayOfWeek = (DayOfWeek)value; //приводим int к DayOfWeek
+                dayOfWeek = (DayOfWeek54)value; //приводим int к DayOfWeek
             }
             else
             {
@@ -2518,9 +2527,25 @@ namespace Lessons
             MyClass66.Bar();
         }
         /**
-        * 
+        * Extension методы (методы расширения) (расширяюшие методы)
         */
         public static void Task67()
+        {
+            DateTime currentDateTime = DateTime.Now;
+            currentDateTime.Print();
+            DateTime.Now.Print();
+            Console.WriteLine(currentDateTime.IsDayOfWeek(DayOfWeek.Tuesday));
+        }
+        public static void Task67_2()
+        {
+            Student67 student = new Student67() { FirstName = "Мартин", LastName = "Дугин" };
+            string fullName = student.GetFullName();
+            Console.WriteLine(fullName);
+        }
+        /**
+        * 
+        */
+        public static void Task68()
         {
 
         }

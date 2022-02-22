@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="Homework.cs" />
     <Compile Include="Lessons.cs" />
+    <Compile Include="MyExtension.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sololearn.cs" />

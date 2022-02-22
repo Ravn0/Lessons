@@ -114,7 +114,9 @@ namespace Lessons
             //Lessons.Task64();
             //Lessons.Task65();
             //Lessons.Task65_2();
-            Lessons.Task66();
+            //Lessons.Task66();
+            Lessons.Task67();
+            Lessons.Task67_2();
 
 
             //Sololearn.Task7();
