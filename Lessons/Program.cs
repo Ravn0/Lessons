@@ -124,9 +124,10 @@ namespace Lessons
             //Lessons.Task70_2();
             //Lessons.Task71();
             //Lessons.Task71_2();
+            Lessons.Task72();
 
 
-            Sololearn.Task15();
+            //Sololearn.Task15();
             Console.ReadKey();
         }
     }

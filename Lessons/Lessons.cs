@@ -602,13 +602,46 @@ namespace Lessons
         }
     }
     /**
-    * class Person71 для Task71()
+    * class Student71 для Task71()
     */
     class Student71 : Person71
     {
         public void Learn()
         {
             Console.WriteLine("Я учусь!");
+        }
+    }
+    /**
+    * class Point2D для Task72()
+    */
+    class Point2D
+    {
+        public Point2D(int x, int y)
+        {
+            X = x;
+            Y = y;
+            Console.WriteLine("Вызван конструктор класса Point2D");
+        }
+        public int X { get; set; }
+        public int Y { get; set; }
+        public void Print()
+        {
+            Console.WriteLine("X:\t" + X);
+            Console.WriteLine("Y:\t" + Y);
+        }
+    }
+    class Point3D : Point2D
+    {
+        public Point3D(int x, int y, int z) : base(x, y)
+        {
+            Z = z;
+            Console.WriteLine("Вызван конструктор класса Point3D");
+        }
+        public int Z { get; set; }
+        public new void Print()
+        {
+            base.Print();
+            Console.WriteLine("Z:\t" + Z);
         }
     }
     /// <summary>
@@ -2822,9 +2855,17 @@ namespace Lessons
             Console.WriteLine($"Фамилия: {person.LastName}\t Имя: {person.FirstName}");
         }
         /**
-        * 
+        * наследование, Конструкторы класса и ключевое слово base
         */
         public static void Task72()
+        {
+            Point3D point3D = new Point3D(3, 6, 8);
+            point3D.Print();
+        }
+        /**
+        * 
+        */
+        public static void Task73()
         {
 
         }
