@@ -139,5 +139,109 @@ namespace Lessons
             string[] words = word.Split(' ');
             Console.WriteLine(words[1]);
         }
+        public static void Task14()
+        {
+            uint rangeFrom;
+            Console.WriteLine("Введите диапазон чисел\nДо:");
+            while (!uint.TryParse(Console.ReadLine(), out rangeFrom))
+            {
+                Console.WriteLine("ОШИБКА! Число было введено не верно. Попробуйте еще раз.");
+                Console.WriteLine("До:");
+            }
+            int a = 0;
+            int b = 1;
+            int c = a + b;
+            switch (rangeFrom)
+            {
+                case 0:
+                    Console.WriteLine("Пошел на хуй со своим 0! И русский корабль забери туда же!");
+                    break;
+                case 1:
+                    Console.WriteLine(a);
+                    break;
+                case 2:
+                    Console.WriteLine(a + "\t" + b);
+                    break;
+                default:
+                    Console.Write(a + "\t" + b + "\t");
+                    for (int i = 0; i < rangeFrom - 2; i++)
+                    {
+                        c = b + a;
+                        a = b;
+                        b = c;
+                        Console.Write(c + "\t");
+                    }
+                    break;
+            }
+        }
+        public static void Task15()
+        {
+            uint rangeFrom, rangeUpTo;
+            Console.WriteLine("Введите диапазон чисел\nДо:");
+            while (!uint.TryParse(Console.ReadLine(), out rangeUpTo))
+            {
+                Console.WriteLine("ОШИБКА! Число было введено не верно. Попробуйте еще раз.");
+                Console.WriteLine("До:");
+            }
+            Console.WriteLine("От:");
+            while (!uint.TryParse(Console.ReadLine(), out rangeFrom))
+            {
+                Console.WriteLine("ОШИБКА! Число было введено не верно. Попробуйте еще раз.");
+                Console.WriteLine("От:");
+            }
+            if (rangeFrom == rangeUpTo)
+            {
+                Console.WriteLine("Пошел на хуй со своим числом от! И русский корабль забери туда же!");
+            }
+            if (rangeFrom > rangeUpTo)
+            {
+                var arr = FibonachiArr(rangeFrom);
+                for (int i = arr.Length - 1; i >= rangeUpTo; i--)
+                {
+                    Console.Write(arr[i] + "\t");
+                }
+            }
+            else
+            {
+                var arr = FibonachiArr(rangeUpTo);
+                for (uint i = rangeFrom; i < arr.Length; i++)
+                {
+                    Console.Write(arr[i] + "\t");
+                }
+            }
+        }
+        static int[] FibonachiArr(uint value)
+        {
+            int[] arr = new int[value];
+
+            int a = 0;
+            int b = 1;
+            int c = a + b;
+            switch (value)
+            {
+                case 0:
+                    Console.WriteLine("Пошел на хуй со своим 0! И русский корабль забери туда же!");
+                    break;
+                case 1:
+                    arr[0] = a;
+                    break;
+                case 2:
+                    arr[0] = a;
+                    arr[1] = b;
+                    break;
+                default:
+                    arr[0] = a;
+                    arr[1] = b;
+                    for (int i = 2; i < value; i++)
+                    {
+                        c = b + a;
+                        a = b;
+                        b = c;
+                        arr[i] = c;
+                    }
+                    break;
+            }
+            return arr;
+        }
     }
 }
