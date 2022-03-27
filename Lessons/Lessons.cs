@@ -660,6 +660,39 @@ namespace Lessons
             Console.WriteLine("Y:\t" + Y);
         }
     }
+    /**
+    * class A для Task74()
+    */
+    class A
+    {
+        public int publicField;
+        private int privateField;
+        protected int protectedField;
+        public A()
+        {
+            Console.WriteLine(publicField); //поле доступно
+            Console.WriteLine(privateField); //поле доступно
+            Console.WriteLine(protectedField); //поле доступно
+        }
+        public void Foo()
+        {
+            Console.WriteLine(publicField); //поле доступно
+            Console.WriteLine(privateField); //поле доступно
+            Console.WriteLine(protectedField); //поле доступно
+        }
+    }
+    /**
+    * class B для Task74()
+    */
+    class B : A
+    {
+        public B()
+        {
+            Console.WriteLine(publicField); //поле доступно
+            //Console.WriteLine(privateField); //поле недоступно
+            Console.WriteLine(protectedField); //поле доступно
+        }
+    }
     /// <summary>
     /// C# УРОКИ | C# ОТ НОВИЧКА К ПРОФЕССИОНАЛУ
     /// By #SimpleCode (https://www.youtube.com/c/SimpleCodeIT/featured)
@@ -2911,9 +2944,25 @@ namespace Lessons
             }
         }
         /**
-        * 
+        * модификатор доступа protected при наследовании
         */
         public static void Task74()
+        {
+            A a = new A();
+            Console.WriteLine(a.publicField);   //поле доступно
+            //Console.WriteLine(a.privateField);   //поле недоступно
+            //Console.WriteLine(a.protectedField);   //поле недоступно
+
+            B b = new B();
+            Console.WriteLine(b.publicField);   //поле доступно
+            //Console.WriteLine(b.privateField);   //поле недоступно
+            //Console.WriteLine(b.protectedField);   //поле недоступно
+            b.Foo();
+        }
+        /**
+        * 
+        */
+        public static void Task75()
         {
 
         }
