@@ -630,6 +630,9 @@ namespace Lessons
             Console.WriteLine("Y:\t" + Y);
         }
     }
+    /**
+    * class Point3D для Task72()
+    */
     class Point3D : Point2D
     {
         public Point3D(int x, int y, int z) : base(x, y)
@@ -642,6 +645,19 @@ namespace Lessons
         {
             base.Print();
             Console.WriteLine("Z:\t" + Z);
+        }
+    }
+    /**
+    * class Point73 для Task73()
+    */
+    class Point73
+    {
+        public int X { get; set; }
+        public int Y { get; set; }
+        public void Print()
+        {
+            Console.WriteLine("X:\t" + X);
+            Console.WriteLine("Y:\t" + Y);
         }
     }
     /// <summary>
@@ -2863,9 +2879,41 @@ namespace Lessons
             point3D.Print();
         }
         /**
+        * приведение типов и наследование 
         * 
+        * использование операторов as и is
         */
         public static void Task73()
+        {
+            object obj = new Point73 { X = 3, Y = 5 };
+            Foo73(obj);
+            Bar73(obj);
+        }
+        /**
+         * Вспомогательный метод для Task73()
+         */
+        static void Foo73(object obj)
+        {
+            Point73 point = obj as Point73;
+            if (point != null)
+            {
+                point.Print();
+            }
+        }
+        /**
+         * Вспомогательный метод для Task73()
+         */
+        static void Bar73(object obj)
+        {
+            if (obj is Point73 point)
+            {
+                point.Print();
+            }
+        }
+        /**
+        * 
+        */
+        public static void Task74()
         {
 
         }
