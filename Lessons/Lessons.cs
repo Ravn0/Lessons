@@ -693,6 +693,46 @@ namespace Lessons
             Console.WriteLine(protectedField); //поле доступно
         }
     }
+    /**
+    * class Car75 для Task75()
+    */
+    class Car75
+    {
+        protected virtual void StartEngine()
+        {
+            Console.WriteLine("Двигатель запущен!");
+        }
+        public virtual void Drive()
+        {
+            StartEngine();
+            Console.WriteLine("Я машина, я еду!");
+        }
+    }
+    /**
+    * class SportCar75 для Task75()
+    */
+    class SportCar75 : Car75
+    {
+        protected override void StartEngine()
+        {
+            Console.WriteLine("Рон дон дон!");
+        }
+        public override void Drive()
+        {
+            StartEngine();
+            Console.WriteLine("Я еду очень быстро!");
+        }
+    }
+    /**
+    * class Person75 для Task75()
+    */
+    class Person75
+    {
+        public void Drive(Car75 car)
+        {
+            car.Drive();
+        }
+    }
     /// <summary>
     /// C# УРОКИ | C# ОТ НОВИЧКА К ПРОФЕССИОНАЛУ
     /// By #SimpleCode (https://www.youtube.com/c/SimpleCodeIT/featured)
@@ -2960,9 +3000,24 @@ namespace Lessons
             b.Foo();
         }
         /**
+        * полиморфизм
         * 
+        * виртуальные методы
+        * 
+        * virtual
+        * 
+        * override
         */
         public static void Task75()
+        {
+            Person75 person = new Person75();
+            person.Drive(new SportCar75());
+            person.Drive(new Car75());
+        }
+        /**
+        * 
+        */
+        public static void Task76()
         {
 
         }
