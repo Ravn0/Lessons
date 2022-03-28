@@ -733,6 +733,67 @@ namespace Lessons
             car.Drive();
         }
     }
+    /**
+    * class Weapon76 для Task76()
+    */
+    abstract class Weapon76
+    {
+        public abstract int Damage { get; }
+        public abstract void Fire();
+        public void ShowInfo()
+        {
+            Console.WriteLine($"{GetType().Name} Damage: {Damage}");
+        }
+    }
+    /**
+    * class Gun76 для Task76()
+    */
+    class Gun76 : Weapon76
+    {
+        public override int Damage { get { return 5; } }
+
+        public override void Fire()
+        {
+            Console.WriteLine("Пыщ!");
+        }
+    }
+    /**
+    * class Gun76 для Task76()
+    */
+    class LaserGun76 : Weapon76
+    {
+        public override int Damage { get { return 8; } }
+        public override void Fire()
+        {
+            Console.WriteLine("Пиу!");
+        }
+    }
+    /**
+    * class Gun76 для Task76()
+    */
+    class Bow76 : Weapon76
+    {
+        public override int Damage => 3;
+
+        public override void Fire()
+        {
+            Console.WriteLine("Чпуньк!");
+        }
+    }
+    /**
+    * class Player76 для Task76()
+    */
+    class Player76
+    {
+        public void Fire(Weapon76 weapon)
+        {
+            weapon.Fire();
+        }
+        public void CheckInfo(Weapon76 weapon)
+        {
+            weapon.ShowInfo();
+        }
+    }
     /// <summary>
     /// C# УРОКИ | C# ОТ НОВИЧКА К ПРОФЕССИОНАЛУ
     /// By #SimpleCode (https://www.youtube.com/c/SimpleCodeIT/featured)
@@ -3015,9 +3076,29 @@ namespace Lessons
             person.Drive(new Car75());
         }
         /**
+        * полиморфизм
         * 
+        * абстрактный класс
+        * 
+        * абстрактный метод
+        * 
+        * абстрактое свойство
         */
         public static void Task76()
+        {
+            Player76 player = new Player76();
+            Weapon76[] inventory = { new Gun76(), new LaserGun76(), new Bow76() };
+            foreach (var item in inventory)
+            {
+                player.CheckInfo(item);
+                player.Fire(item);
+                Console.WriteLine();
+            }
+        }
+        /**
+        * 
+        */
+        public static void Task77()
         {
 
         }
