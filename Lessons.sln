@@ -35,6 +35,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebcamProducer", "WebcamPro
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson71", "Lesson71\Lesson71.csproj", "{91058A2C-3CDD-4B7D-8FE9-E1E79E3B00F2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson77", "Lesson77\Lesson77.csproj", "{02E883E5-61FF-471A-B279-BDF44C395F2A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -105,6 +107,10 @@ Global
 		{91058A2C-3CDD-4B7D-8FE9-E1E79E3B00F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{91058A2C-3CDD-4B7D-8FE9-E1E79E3B00F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{91058A2C-3CDD-4B7D-8FE9-E1E79E3B00F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02E883E5-61FF-471A-B279-BDF44C395F2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02E883E5-61FF-471A-B279-BDF44C395F2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02E883E5-61FF-471A-B279-BDF44C395F2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02E883E5-61FF-471A-B279-BDF44C395F2A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

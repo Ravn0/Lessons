@@ -794,6 +794,54 @@ namespace Lessons
             weapon.ShowInfo();
         }
     }
+    /**
+    * interface IDataProvider для Task77()
+    */
+    interface IDataProvider
+    {
+        string GetData();
+    }
+    /**
+    * interface IDataProcessor для Task77()
+    */
+    interface IDataProcessor
+    {
+        void ProcessData(IDataProvider dataProvider);
+    }
+    /**
+     * class ConsoleDataProcessor реализует интерфейс IDataProcessor
+     */
+    class ConsoleDataProcessor : IDataProcessor
+    {
+        public void ProcessData(IDataProvider dataProvider)
+        {
+            Console.WriteLine(dataProvider.GetData());
+        }
+    }
+    /**
+     * классы DbDataProvider, FileDataProvider и APIDataProvider реализуют интерфейс IDataProvider
+     */
+    class DbDataProvider : IDataProvider
+    {
+        public string GetData()
+        {
+            return "Данные из БД";
+        }
+    }
+    class FileDataProvider : IDataProvider
+    {
+        public string GetData()
+        {
+            return "Данные из файла";
+        }
+    }
+    class APIDataProvider : IDataProvider
+    {
+        public string GetData()
+        {
+            return "Данные из API";
+        }
+    }
     /// <summary>
     /// C# УРОКИ | C# ОТ НОВИЧКА К ПРОФЕССИОНАЛУ
     /// By #SimpleCode (https://www.youtube.com/c/SimpleCodeIT/featured)
@@ -3096,9 +3144,34 @@ namespace Lessons
             }
         }
         /**
+        * интерфейсы и полиморфизм
         * 
+        * Интерфейс это кострукция языка программрования C#
+        * Интерфейсы должны оперделять поведение и контракт, но не должны содержать реализацию
+        * Классы реализуют интерфейс
+        * У интерфейса есть множественное наследование - это важное отличие интерфеса от класса или абстрактного класса 
+        * Интерфейсы могут наследоваться между собой (один интерфейс может унаследовать несколько разный интерфесов),
+        * один определенный класс может унаследовать несколько интерфесов
+        * В интерфесе не может быть конструкторов, интерфейс не может содержать поля класса (переменные)
+        * Мы не можем создать экземпляр интерфейса
+        * Каждая отдельная сущность должна находится в отдельном файле (для классов и интерфейсов разные файлы)
+        * У интефесов нет реализации а только "абстрактные" методы (как у астракнтого класса)
+        * Интерфейсы иогут содержать свойства. (Свойства это мотоды которые маскируются под поля)
+        * Задачей интерфеса является определить контракт азвимодействий между классами
+        * С помощью интерфейса мы определяем поведение которое в последствии будет реализовано в каком-то конкретно классе
+        * У интерфесов все поля (методы, свойства) по умолчанию имеют модификатор доступа public
         */
         public static void Task77()
+        {
+            IDataProcessor dataProcessor = new ConsoleDataProcessor();
+            dataProcessor.ProcessData(new DbDataProvider());
+            dataProcessor.ProcessData(new FileDataProvider());
+            dataProcessor.ProcessData(new APIDataProvider());
+        }
+        /**
+        * 
+        */
+        public static void Task78()
         {
 
         }
