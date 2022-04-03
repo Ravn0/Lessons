@@ -3173,7 +3173,15 @@ namespace Lessons
         */
         public static void Task78()
         {
-
+            //proj Lesson78
         }
     }
+    /**
+    * 
+    */
+    public static void Task79()
+    {
+
+    }
+}
 }
