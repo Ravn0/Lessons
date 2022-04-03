@@ -130,7 +130,8 @@ namespace Lessons
             //Lessons.Task75();
             //Lessons.Task76();
             //Lessons.Task77();
-            Lessons.Task78();
+            //Lessons.Task78();
+            Lessons.Task79();
 
 
             //Sololearn.Task15();

@@ -842,6 +842,39 @@ namespace Lessons
             return "Данные из API";
         }
     }
+    /**
+    * interface IFirstInterface и ISecondInterface для Task79()
+    */
+    interface IFirstInterface
+    {
+        void Action();
+    }
+    interface ISecondInterface
+    {
+        void Action();
+    }
+    /**
+     * классы MyClass79, FileDataProvider и APIDataProvider реализуют интерфейс IDataProvider
+     */
+    class MyClass79 : IFirstInterface, ISecondInterface
+    {
+        public void Action()
+        {
+            Console.WriteLine("MyClass Action...");
+        }
+    }
+    class MyOtherClass : IFirstInterface, ISecondInterface
+    {
+        void IFirstInterface.Action()
+        {
+            Console.WriteLine("MyOtherClass IFirstInterface.Action");
+        }
+
+        void ISecondInterface.Action()
+        {
+            Console.WriteLine("MyOtherClass ISecondInterface.Action");
+        }
+    }
     /// <summary>
     /// C# УРОКИ | C# ОТ НОВИЧКА К ПРОФЕССИОНАЛУ
     /// By #SimpleCode (https://www.youtube.com/c/SimpleCodeIT/featured)
@@ -3169,19 +3202,63 @@ namespace Lessons
             dataProcessor.ProcessData(new APIDataProvider());
         }
         /**
-        * 
+        * Наследование интерфейсов C# 
+        * множественное наследование интерфейсов
         */
         public static void Task78()
         {
             //proj Lesson78
         }
-    }
-    /**
-    * 
-    */
-    public static void Task79()
-    {
+        /**
+        * Явная реальзация интерфейсов
+        */
+        public static void Task79()
+        {
+            MyClass79 myClass = new MyClass79();
+            Foo79(myClass);
+            Bar79(myClass);
+            Console.WriteLine();
+            MyOtherClass myOtherClass = new MyOtherClass();
+            Foo79(myOtherClass);
+            Bar79(myOtherClass);
+            Console.WriteLine();
+            IFirstInterface firstInterface = myOtherClass;
+            firstInterface.Action();
+            Console.WriteLine();
+            ((IFirstInterface)myOtherClass).Action();
+            ((ISecondInterface)myOtherClass).Action();
+            Console.WriteLine();
+            object obj = new object();
+            //((IFirstInterface)obj).Action();  //InvalidCastException
+            if (obj is IFirstInterface firstInterface1)
+            {
+                firstInterface1.Action();
+            }
+            if (myOtherClass is IFirstInterface firstInterface2)
+            {
+                firstInterface2.Action();
+            }
+        }
+        /**
+         * Вспомогательный метод для Task73()
+         */
+        static void Foo79(IFirstInterface firstInterface)
+        {
+            firstInterface.Action();
+        }
+        /**
+         * Вспомогательный метод для Task73()
+         */
+        static void Bar79(ISecondInterface secondInterface)
+        {
+            secondInterface.Action();
+        }
+        /**
+        * 
+        */
+        public static void Task80()
+        {
 
+        }
     }
-}
 }
