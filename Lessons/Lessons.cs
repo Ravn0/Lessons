@@ -854,7 +854,7 @@ namespace Lessons
         void Action();
     }
     /**
-     * классы MyClass79, FileDataProvider и APIDataProvider реализуют интерфейс IDataProvider
+     * классы MyClass79 и MyOtherClass реализуют интерфейсы IFirstInterface, ISecondInterface
      */
     class MyClass79 : IFirstInterface, ISecondInterface
     {
@@ -3240,23 +3240,30 @@ namespace Lessons
             }
         }
         /**
-         * Вспомогательный метод для Task73()
+         * Вспомогательный метод для Task79()
          */
         static void Foo79(IFirstInterface firstInterface)
         {
             firstInterface.Action();
         }
         /**
-         * Вспомогательный метод для Task73()
+         * Вспомогательный метод для Task79()
          */
         static void Bar79(ISecondInterface secondInterface)
         {
             secondInterface.Action();
         }
         /**
-        * 
+        * Реализация интерфейса по умолчанию в C# 8.0
         */
         public static void Task80()
+        {
+            //proj Lesson78   
+        }
+        /**
+        * 
+        */
+        public static void Task81()
         {
 
         }
