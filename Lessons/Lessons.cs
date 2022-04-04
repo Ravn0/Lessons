@@ -875,27 +875,6 @@ namespace Lessons
             Console.WriteLine("MyOtherClass ISecondInterface.Action");
         }
     }
-    /**
-     * класс ClassPoint и структура StructPoint для Task81()
-     */
-    public class ClassPoint
-    {
-        public int X { get; set; }
-        public int Y { get; set; }
-        public void Print()
-        {
-            Console.WriteLine($"X:{X}\tY:{Y}");
-        }
-    }
-    public struct StructPoint
-    {
-        public int X { get; set; }
-        public int Y { get; set; }
-        public void Print()
-        {
-            Console.WriteLine($"X:{X}\tY:{Y}");
-        }
-    }
     /// <summary>
     /// C# УРОКИ | C# ОТ НОВИЧКА К ПРОФЕССИОНАЛУ
     /// By #SimpleCode (https://www.youtube.com/c/SimpleCodeIT/featured)
@@ -3279,19 +3258,33 @@ namespace Lessons
         */
         public static void Task80()
         {
-            //proj Lesson78   
+            //proj Lesson80   
         }
         /**
         * Структуры
         */
         public static void Task81()
         {
-
+            //proj Lesson81
         }
         /**
         * 
         */
         public static void Task82()
+        {
+
+        }
+        /**
+        * 
+        */
+        public static void Task83()
+        {
+
+        }
+        /**
+        * 
+        */
+        public static void Task84()
         {
 
         }
