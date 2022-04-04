@@ -3268,11 +3268,15 @@ namespace Lessons
             //proj Lesson81
         }
         /**
-        * 
+        * boxing and unboxing
         */
         public static void Task82()
         {
-
+            int a = 1;
+            a.GetType();
+            object b = a; //упаковка
+            int c = (int)b; //расспаковка
+            //decimal d = (decimal)b; //InvalidCastException
         }
         /**
         * 
