@@ -905,6 +905,24 @@ namespace Lessons
             _array = newArray;
         }
     }
+    /**
+     * класс SwapTestClass для Task84()
+     */
+    public static class SwapTestClass
+    {
+        public static void GenericSwap<T>(ref T a, ref T b)
+        {
+            T temp = a;
+            a = b;
+            b = temp;
+        }
+        public static void Swap(ref object a, ref object b)
+        {
+            object temp = a;
+            a = b;
+            b = temp;
+        }
+    }
     /// <summary>
     /// C# УРОКИ | C# ОТ НОВИЧКА К ПРОФЕССИОНАЛУ
     /// By #SimpleCode (https://www.youtube.com/c/SimpleCodeIT/featured)
@@ -3365,7 +3383,7 @@ namespace Lessons
             }
         }
         /**
-        * 
+        * Обобщения (generics)
         */
         public static void Task84()
         {

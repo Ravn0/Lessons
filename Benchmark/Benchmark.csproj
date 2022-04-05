@@ -12,6 +12,7 @@
   <ItemGroup>
     <ProjectReference Include="..\BenchmarkLesson\BenchmarkLesson.csproj" />
     <ProjectReference Include="..\Lesson81\Lesson81.csproj" />
+    <ProjectReference Include="..\Lessons\Lessons.csproj" />
   </ItemGroup>
 
 </Project>
