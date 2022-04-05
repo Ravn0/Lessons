@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using Task40and42WF;
 using System.Reflection;
 using Lessons_MyExtension;
+using System.Collections;
 
 namespace Lessons
 {
@@ -873,6 +874,35 @@ namespace Lessons
         void ISecondInterface.Action()
         {
             Console.WriteLine("MyOtherClass ISecondInterface.Action");
+        }
+    }
+    /**
+     * класс MyList для Task83_2()
+     */
+    public class MyList<T>
+    {
+        private T[] _array = Array.Empty<T>();
+        public T this[int index]
+        {
+            get
+            {
+                return _array[index];
+            }
+            set
+            {
+                _array[index] = value;
+            }
+        }
+        public int Count { get { return _array.Length; } }
+        public void Add(T value)
+        {
+            var newArray = new T[_array.Length + 1];
+            for (int i = 0; i < _array.Length; i++)
+            {
+                newArray[i] = _array[i];
+            }
+            newArray[_array.Length] = value;
+            _array = newArray;
         }
     }
     /// <summary>
@@ -3279,11 +3309,60 @@ namespace Lessons
             //decimal d = (decimal)b; //InvalidCastException
         }
         /**
-        * 
+        * Обобщения (generics)
         */
         public static void Task83()
         {
-
+            double a = 1;
+            double b = 5.3;
+            Console.WriteLine($"a = {a}\tb = {b}");
+            Swap(ref a, ref b);
+            Console.WriteLine($"a = {a}\tb = {b}");
+            Console.WriteLine("\n");
+            string str1 = "Hello";
+            string str2 = "World";
+            Console.WriteLine($"str1 = {str1}\tstr2 = {str2}");
+            Swap(ref str1, ref str2);
+            Console.WriteLine($"str1 = {str1}\tstr2 = {str2}");
+            Console.WriteLine("\n");
+            int result = Foo<int>();
+            Console.WriteLine(result);
+        }
+        /**
+         * Вспомогательный метод для Task83()
+         */
+        static void Swap<T>(ref T a, ref T b)
+        {
+            T temp = a;
+            a = b;
+            b = temp;
+        }
+        /**
+         * Вспомогательный метод для Task83()
+         */
+        static T Foo<T>()
+        {
+            return default(T);
+        }
+        public static void Task83_2()
+        {
+            List<int> list = new List<int>();
+            list.Add(2);
+            list.Add(3);
+            Console.WriteLine(list[0]);
+            list[0] = 2;
+            ArrayList arrayList = new ArrayList();
+            arrayList.Add(2);
+            arrayList.Add("33");
+            MyList<int> myList = new MyList<int>();
+            myList.Add(5);
+            myList.Add(7);
+            myList.Add(9);
+            myList.Add(45);
+            for (int i = 0; i < myList.Count; i++)
+            {
+                Console.WriteLine(myList[i]);
+            }
         }
         /**
         * 
